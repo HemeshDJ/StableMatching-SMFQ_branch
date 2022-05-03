@@ -12,3 +12,10 @@
 /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/lib/CMakeFiles/install.dir
 /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/lib/CMakeFiles/install/local.dir
 /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/lib/CMakeFiles/install/strip.dir
+/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/test/CMakeFiles/testrunner.dir
+/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/test/CMakeFiles/edit_cache.dir
+/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/test/CMakeFiles/rebuild_cache.dir
+/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/test/CMakeFiles/list_install_components.dir
+/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/test/CMakeFiles/install.dir
+/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/test/CMakeFiles/install/local.dir
+/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build/test/CMakeFiles/install/strip.dir

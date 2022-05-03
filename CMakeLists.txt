@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 17)
 # include directory and the libraries we will build
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 add_subdirectory(lib)
-# add_subdirectory(test)
+add_subdirectory(test)
 
 # build
 add_executable(graphmatching main.cc "include/LpApproxSMFQ.h" "include/Exact_Exponential_SMFQ.h" 

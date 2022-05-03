@@ -123,5 +123,60 @@
   "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
   "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc",
   "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestDefs.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestDefs.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestDefs.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestRunner.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestRunner.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestRunner.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPreferenceList.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPreferenceList.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestPartnerList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPartnerList.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPartnerList.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestUtils.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestUtils.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestUtils.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestStableMarriage.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestStableMarriage.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestPopular.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPopular.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPopular.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestHR.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestHR.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestHR.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestYokoi.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestYokoi.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestYokoi.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestMaximalEnvyfreeHRLQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestMaximalEnvyfreeHRLQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestParser.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestParser.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestParser.cc"
 }
 ]
