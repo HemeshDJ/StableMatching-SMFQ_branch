@@ -1,0 +1,9 @@
+keepbook[r1] = 0
+keepbook[r2] = 0
+keepbook[r3] = 0
+keepbook[r4] = 0
+popularity sum is greater than zero
+r1,h2,2
+r2,h3,3
+r3,h1,1
+r4,h1,1

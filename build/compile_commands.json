@@ -1,0 +1,127 @@
+[
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -g   -Wall -O0 -g -std=gnu++17 -o CMakeFiles/graphmatching.dir/main.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/main.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/main.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MatchingAlgorithm.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MatchingAlgorithm.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/NProposingMatching.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/NProposingMatching.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/NProposingMatching.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/YokoiEnvyfreeHRLQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/YokoiEnvyfreeHRLQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MaximalEnvyfreeHRLQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MaximalEnvyfreeHRLQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HHeuristicHRLQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HHeuristicHRLQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RHeuristicHRLQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RHeuristicHRLQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/BipartiteGraph.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/BipartiteGraph.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/BipartiteGraph.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Partner.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Partner.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Partner.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/PartnerList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PartnerList.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PartnerList.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/PreferenceList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PreferenceList.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PreferenceList.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Vertex.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Vertex.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Vertex.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/GraphReader.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/GraphReader.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/GraphReader.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Utils.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Utils.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Utils.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/RelaxedStable.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RelaxedStable.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RelaxedStable.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Statistics.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Statistics.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Statistics.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/SEAPopularHRLQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/SEAPopularHRLQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/LpApproxSMFQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/LpApproxSMFQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Exact_Exponential_SMFQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Exact_Exponential_SMFQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/DirectApproachHR2LQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/DirectApproachHR2LQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Node.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Node.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Node.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Edge.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Edge.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Edge.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Graph.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Graph.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Graph.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HApproxSMFQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HApproxSMFQ.cc"
+},
+{
+  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
+  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc",
+  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc"
+}
+]

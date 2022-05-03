@@ -1,0 +1,9 @@
+PartitionA 
+first partition @PartitionA1
+first success 
+r1 
+r2 
+r3 
+r4 
+End 
+A done 
