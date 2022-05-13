@@ -1,20 +1,17 @@
 @PartitionA
-r1, r2, r3, r4 ;
+r1, r2;
 @End
 
 @PartitionB
-h1 (1, 2), h2 (1, 1), h3 (1, 1);
+h1, h2;
 @End
 
 @PreferenceListsA
-r1: h1, h2, h3;
-r2: h1, h2, h3;
-r3: h1, h2;
-r4: h1, h2;
+r1: h1, h2;
+r2: h1;
 @End
 
 @PreferenceListsB
-h1: r1, r2, r3, r4;
-h2: r1, r2, r3, r4;
-h3: r1, r2;
+h1: r1, r2;
+h2: r1;
 @End

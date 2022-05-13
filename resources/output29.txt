@@ -1,3 +1,0 @@
-h3: r1, r2, r3;
-
-Incompatible preference lists

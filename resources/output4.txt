@@ -1,0 +1,8 @@
+keepbook[r1] = 0
+keepbook[h2] = 0
+keepbook[r2] = 1
+keepbook[h1] = 0
+Edges are not covered
+popularity sum is less than or equal to zero
+r1,h2,2
+r2,h1,1

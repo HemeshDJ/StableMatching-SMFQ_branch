@@ -10,7 +10,9 @@
    in Utils.cc, which prints the number of allotments with the given signature
    Changed some minor parts in print_signature definition and added new argument for choosing stream
 
-5) Included parameter for choosing between type of outputs
+5) Created test suite (myth buster)
+
+6) Included parameter for choosing between type of outputs
    in main.cc, which lets us choose between resident ranks type or signature type
 
-./graphmatching -A -p -i ../resources/our_input.txt -o ../resources/outout2.txt
+7) Implemented dual signature for one-to-one popularity matching

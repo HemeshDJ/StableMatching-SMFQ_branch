@@ -1,182 +1,182 @@
 [
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -g   -Wall -O0 -g -std=gnu++17 -o CMakeFiles/graphmatching.dir/main.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/main.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/main.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -g   -Wall -O0 -g -std=gnu++17 -o CMakeFiles\\graphmatching.dir\\main.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\main.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\main.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MatchingAlgorithm.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MatchingAlgorithm.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\MatchingAlgorithm.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\MatchingAlgorithm.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\MatchingAlgorithm.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/NProposingMatching.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/NProposingMatching.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/NProposingMatching.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\NProposingMatching.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\NProposingMatching.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\NProposingMatching.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/YokoiEnvyfreeHRLQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/YokoiEnvyfreeHRLQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\YokoiEnvyfreeHRLQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\YokoiEnvyfreeHRLQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\YokoiEnvyfreeHRLQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MaximalEnvyfreeHRLQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/MaximalEnvyfreeHRLQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\MaximalEnvyfreeHRLQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\MaximalEnvyfreeHRLQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\MaximalEnvyfreeHRLQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HHeuristicHRLQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HHeuristicHRLQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\HHeuristicHRLQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\HHeuristicHRLQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\HHeuristicHRLQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RHeuristicHRLQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RHeuristicHRLQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\RHeuristicHRLQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\RHeuristicHRLQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\RHeuristicHRLQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/BipartiteGraph.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/BipartiteGraph.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/BipartiteGraph.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\BipartiteGraph.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\BipartiteGraph.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\BipartiteGraph.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Partner.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Partner.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Partner.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Partner.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Partner.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Partner.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/PartnerList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PartnerList.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PartnerList.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\PartnerList.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\PartnerList.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\PartnerList.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/PreferenceList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PreferenceList.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/PreferenceList.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\PreferenceList.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\PreferenceList.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\PreferenceList.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Vertex.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Vertex.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Vertex.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Vertex.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Vertex.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Vertex.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/GraphReader.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/GraphReader.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/GraphReader.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\GraphReader.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\GraphReader.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\GraphReader.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Utils.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Utils.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Utils.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Utils.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Utils.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Utils.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/RelaxedStable.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RelaxedStable.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/RelaxedStable.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\RelaxedStable.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\RelaxedStable.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\RelaxedStable.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Statistics.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Statistics.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Statistics.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Statistics.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Statistics.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Statistics.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/SEAPopularHRLQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/SEAPopularHRLQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\SEAPopularHRLQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\SEAPopularHRLQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\SEAPopularHRLQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/LpApproxSMFQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/LpApproxSMFQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\LpApproxSMFQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\LpApproxSMFQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\LpApproxSMFQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Exact_Exponential_SMFQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Exact_Exponential_SMFQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Exact_Exponential_SMFQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Exact_Exponential_SMFQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Exact_Exponential_SMFQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/DirectApproachHR2LQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/DirectApproachHR2LQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\DirectApproachHR2LQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\DirectApproachHR2LQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\DirectApproachHR2LQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Node.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Node.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Node.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Node.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Node.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Node.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Edge.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Edge.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Edge.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Edge.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Edge.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Edge.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Graph.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Graph.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Graph.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Graph.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Graph.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Graph.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HApproxSMFQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/HApproxSMFQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\HApproxSMFQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\HApproxSMFQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\HApproxSMFQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include -g   -Wall -O0 -g -std=gnu++17 -o lib\\CMakeFiles\\graph.dir\\Convert_HR_to_HR2LQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Convert_HR_to_HR2LQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\lib\\Convert_HR_to_HR2LQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestDefs.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestDefs.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestDefs.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestDefs.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestDefs.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestDefs.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestRunner.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestRunner.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestRunner.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestRunner.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestRunner.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestRunner.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPreferenceList.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPreferenceList.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestPreferenceList.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestPreferenceList.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestPreferenceList.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestPartnerList.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPartnerList.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPartnerList.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestPartnerList.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestPartnerList.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestPartnerList.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestUtils.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestUtils.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestUtils.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestUtils.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestUtils.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestUtils.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestStableMarriage.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestStableMarriage.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestStableMarriage.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestStableMarriage.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestStableMarriage.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestPopular.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPopular.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestPopular.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestPopular.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestPopular.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestPopular.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestHR.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestHR.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestHR.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestHR.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestHR.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestHR.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestYokoi.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestYokoi.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestYokoi.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestYokoi.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestYokoi.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestYokoi.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestMaximalEnvyfreeHRLQ.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestMaximalEnvyfreeHRLQ.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestMaximalEnvyfreeHRLQ.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestMaximalEnvyfreeHRLQ.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestMaximalEnvyfreeHRLQ.cc"
 },
 {
-  "directory": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/build",
-  "command": "/usr/bin/clang++ -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/include -I/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test/CMakeFiles/testrunner.dir/TestParser.cc.o -c /home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestParser.cc",
-  "file": "/home/djhem/Documents/Repos/StableMatching-SMFQ_branch/test/TestParser.cc"
+  "directory": "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build",
+  "command": "\"D:\\Program Files\\MSYS2\\mingw64\\bin\\clang++.exe\" -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include -g   -Wall -O0 -g -std=gnu++17 -o test\\CMakeFiles\\testrunner.dir\\TestParser.cc.obj -c D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestParser.cc",
+  "file": "D:\\IITM\\Projects\\StableMatchingProject\\StableMatching-SMFQ_branch\\test\\TestParser.cc"
 }
 ]

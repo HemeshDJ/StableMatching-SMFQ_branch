@@ -5,7 +5,7 @@
 #include <set>
 #include <iostream>
 
-std::map<VertexPtr, VertexBookkeeping> keepbook;
+std::map<VertexPtr, int> levels;
 
 NProposingMatching::NProposingMatching(std::shared_ptr<BipartiteGraph> G,
                                        bool A_proposing, int max_level)
@@ -47,11 +47,12 @@ void NProposingMatching::add_matched_partners(std::shared_ptr<MatchedPairListTyp
 
 void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing)
 {
-    std::map<VertexPtr, int> popularity;
     const auto& proposing_partition = A_proposing ? G->get_A_partition()
                                                        : G->get_B_partition();
     const auto& non_proposing_partition = A_proposing ? G->get_B_partition()
-                                                       : G->get_A_partition();                                               
+                                                       : G->get_A_partition();
+
+    // checking if a vertex is matched
     std::map<VertexPtr, int> is_matched;
     for (const auto& it : proposing_partition) {
         auto u = it.second;
@@ -68,28 +69,136 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
         }
     }
 
+    // assigning edge weights to the edges
+
+    std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
+    for( auto & it : G->get_A_partition() ) {
+        auto u = it.second;
+
+        for( auto& it2 : u->get_preference_list() ) {
+            int weight = 0;
+            auto v = it2.vertex;
+            auto M_u = M->find(u);
+
+            if(M_u == M->end()) {
+                weight += 1;
+            }
+            else {
+                auto u_partner = (M_u->second).get_least_preferred();
+                if(u_partner.rank < it2.rank) {
+                    weight -= 1;
+                }
+                else if(u_partner.rank > it2.rank) {
+                    weight += 1;
+                }
+                else {
+                    weight += 0;
+                }
+            }
+
+            edge_weights[u][v] = weight;
+        }
+    }
+
+    for( auto & it : G->get_B_partition() ) {
+        auto u = it.second;
+
+        for( auto& it2 : u->get_preference_list() ) {
+            int weight = 0;
+            auto v = it2.vertex;
+            auto M_u = M->find(u);
+
+            if(M_u == M->end()) {
+                weight += 1;
+            }
+            else {
+                auto u_partner = (M_u->second).get_least_preferred();
+                if(u_partner.rank < it2.rank) {
+                    weight -= 1;
+                }
+                else if(u_partner.rank > it2.rank) {
+                    weight += 1;
+                }
+                else {
+                    weight += 0;
+                }
+            }
+
+            edge_weights[u][v] = weight;
+        }
+    }
+
+    for (auto &it : G->get_A_partition()) {
+        auto v = it.second;
+        edge_weights[v][v] = -is_matched[v];
+    }
+
+    for (auto &it : G->get_B_partition()) {
+        auto v = it.second;
+        edge_weights[v][v] = -is_matched[v];
+    }
+
+    // assigning popularity to each vertex
+    std::map<VertexPtr, int> popularity;                                             
+
     for (auto& it : proposing_partition) {
         auto v = it.second;
-        if(keepbook[v].level == 0) {
+        if(levels[v] == 0) {
             popularity[v] = 1;
         }
-        else if(keepbook[v].level == 1) {
+        else if(levels[v] == 1) {
             popularity[v] = (is_matched[v]) ? -1 : 0;
         }
-        std::cout << v->get_id() << " " << popularity[v] << std::endl;
+        // std::cout << v->get_id() << " " << popularity[v] << std::endl;
     }
 
     for (auto& it : non_proposing_partition) {
         auto v = it.second;
-        if(keepbook[v].level == 1) {
+        if(levels[v] == 1) {
             popularity[v] = 1;
         }
-        else if(keepbook[v].level == 0) {
+        else if(levels[v] == 0) {
             popularity[v] = (is_matched[v]) ? -1 : 0;
         }
-        std::cout << v->get_id() << " " << popularity[v] << std::endl;
+        // std::cout << v->get_id() << " " << popularity[v] << std::endl;
     }
 
+    // checking if each edge is covered
+    bool flag = true;
+    for( auto & it : G->get_A_partition() ) {
+        auto u = it.second;
+
+        for( auto& it2 : u->get_preference_list() ) {
+            auto v = it2.vertex;
+            auto M_u = M->find(u);
+
+            if(popularity[u] + popularity[v] > edge_weights[v][u]+edge_weights[u][v]) {
+                flag = false;
+                std::cout << u->get_id() << " " << v->get_id() << std::endl;
+            }
+        }
+    }
+    // for (auto &it : G->get_A_partition()) {
+    //     auto v = it.second;
+    //     if(popularity[v] > edge_weights[v][v]) {
+    //         flag = false;
+    //     }
+    // }
+    // for (auto &it : G->get_B_partition()) {
+    //     auto v = it.second;
+    //     if(popularity[v] > edge_weights[v][v]) {
+    //         flag = false;
+    //     }   
+    // }
+
+    if(flag) {
+        std::cout << "Edges are covered" << std::endl;
+    }
+    else {
+        std::cout << "Edges are not covered" << std::endl;
+    }
+
+    // checking if total sum of popularity is 0
     int pop_sum = 0;
     for(auto it : popularity) {
         pop_sum += it.second;
@@ -175,8 +284,6 @@ std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::comp
     
     /** New Code **/
 
-    keepbook = bookkeep_data;
-
     for (const auto& it : proposing_partition) {
         auto u = it.second;
         auto M_u = M->find(u);
@@ -186,10 +293,13 @@ std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::comp
 
             for (const auto& i : partners) {
                 auto v = i.vertex;
-                keepbook[u] = VertexBookkeeping(keepbook[v].level, u->get_preference_list().size());
-                std::cout << "keepbook[" << v->get_id() << "] = " << bookkeep_data[v].level << std::endl;
-                std::cout << "keepbook[" << u->get_id() << "] = " << keepbook[u].level << std::endl;
+                levels[v] = levels[u] = bookkeep_data[u].level;
+                std::cout << "levels[" << u->get_id() << "] = " << levels[u] << std::endl;
+                std::cout << "levels[" << v->get_id() << "] = " << levels[v] << std::endl;
             }
+        }
+        else {
+            levels[u] = bookkeep_data[u].level;
         }
     }
 
