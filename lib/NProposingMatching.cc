@@ -70,7 +70,6 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
     }
 
     // assigning edge weights to the edges
-
     std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
     for( auto & it : G->get_A_partition() ) {
         auto u = it.second;
@@ -178,19 +177,6 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             }
         }
     }
-    // for (auto &it : G->get_A_partition()) {
-    //     auto v = it.second;
-    //     if(popularity[v] > edge_weights[v][v]) {
-    //         flag = false;
-    //     }
-    // }
-    // for (auto &it : G->get_B_partition()) {
-    //     auto v = it.second;
-    //     if(popularity[v] > edge_weights[v][v]) {
-    //         flag = false;
-    //     }   
-    // }
-
     if(flag) {
         std::cout << "Edges are covered" << std::endl;
     }
