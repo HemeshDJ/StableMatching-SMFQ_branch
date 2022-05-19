@@ -1,0 +1,16 @@
+is_matched is fixed
+u_partner's rank is 2 v's rank is 1
+u_partner's rank is 2 v's rank is 2
+u_partner's rank is 1 v's rank is 1
+edge_weights are fixed for partition A
+u_partner's rank is 2 v's rank is 1
+u_partner's rank is 2 v's rank is 2
+u_partner's rank is 1 v's rank is 1
+edge_weights are fixed for partition B
+edge_weights are fixed for the self loops
+popularity is fixed for proposing partition
+popularity is fixed for non proposing partition
+Edges are covered
+popularity sum is less than or equal to zero
+r1,h2,2
+r2,h1,1

@@ -1,11 +1,8 @@
-keepbook[b2] = 0
-keepbook[a1] = 0
-keepbook[b1] = 0
-keepbook[a2] = 0
-keepbook[b3] = 0
-keepbook[a3] = 0
+levels[r1] = 0
+levels[h2] = 0
+levels[r2] = 1
+levels[h1] = 1
 Edges are covered
 popularity sum is less than or equal to zero
-a1,b2,1
-a2,b1,2
-a3,b3,1
+r1,h2,2
+r2,h1,1

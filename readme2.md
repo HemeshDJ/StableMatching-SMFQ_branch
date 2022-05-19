@@ -16,3 +16,5 @@
    in main.cc, which lets us choose between resident ranks type or signature type
 
 7) Implemented dual signature for one-to-one popularity matching
+
+./graphmatching -A -p -i ../resources/one2one.txt -o ../resources/outone2one1.txt
