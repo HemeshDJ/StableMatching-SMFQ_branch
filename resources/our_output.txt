@@ -1,0 +1,4 @@
+Edges are covered
+popularity sum is equal to zero
+r1,h2,2
+r2,h1,1
