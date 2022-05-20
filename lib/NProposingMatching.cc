@@ -52,6 +52,17 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
     const auto& non_proposing_partition = A_proposing ? G->get_B_partition()
                                                        : G->get_A_partition();
 
+    std::vector<VertexPtr> VertexSet;
+    for (auto &it : G->get_A_partition()) {
+        auto v = it.second;
+        VertexSet.push_back(v);
+    }
+
+    for (auto &it : G->get_B_partition()) {
+        auto v = it.second;
+        VertexSet.push_back(v);
+    }
+
     // checking if a vertex is matched
     std::map<VertexPtr, int> is_matched;
     for (const auto& it : proposing_partition) {
@@ -68,7 +79,7 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             }
         }
     }
-    std::cout << "is_matched is fixed" << std::endl;
+    // std::cout << "is_matched is fixed" << std::endl;
 
     // assigning edge weights to the edges
     std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
@@ -81,28 +92,32 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             auto v = it2.vertex;
             auto M_u = M->find(u);
 
-            if(M_u == M->end()) {
-                weight += 1;
+            if(M_u != M->end()) {
+                auto& partners = M_u->second;
+
+                for (const auto& i : partners) {
+                    auto u_partner = i.vertex;
+                    int u_partner_rank = compute_rank(u_partner, u_pref_list);
+                
+                    if(u_partner_rank < it2.rank) {
+                        weight -= 1;
+                    }
+                    else if(u_partner_rank > it2.rank) {
+                        weight += 1;
+                    }
+                    else {
+                        weight += 0;
+                    }
+                }
             }
             else {
-                auto u_partner = (M_u->second).get_least_preferred().vertex;
-                int u_partner_rank = compute_rank(u_partner, u_pref_list);
-                // std::cout << "u_partner's rank is " <<  u_partner_rank << " v's rank is " << it2.rank << std::endl;
-                if(u_partner_rank < it2.rank) {
-                    weight -= 1;
-                }
-                else if(u_partner_rank > it2.rank) {
-                    weight += 1;
-                }
-                else {
-                    weight += 0;
-                }
+                weight += 1;
             }
 
             edge_weights[u][v] = weight;
         }
     }
-    std::cout << "edge_weights are fixed for partition A" << std::endl;
+    // std::cout << "edge_weights are fixed for partition A" << std::endl;
 
     for( auto & it : G->get_B_partition() ) {
         auto u = it.second;
@@ -113,39 +128,37 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             auto v = it2.vertex;
             auto M_u = M->find(u);
 
-            if(M_u == M->end()) {
-                weight += 1;
+            if(M_u != M->end()) {
+                auto& partners = M_u->second;
+
+                for (const auto& i : partners) {
+                    auto u_partner = i.vertex;
+                    int u_partner_rank = compute_rank(u_partner, u_pref_list);
+                
+                    if(u_partner_rank < it2.rank) {
+                        weight -= 1;
+                    }
+                    else if(u_partner_rank > it2.rank) {
+                        weight += 1;
+                    }
+                    else {
+                        weight += 0;
+                    }
+                }
             }
             else {
-                auto u_partner = (M_u->second).get_least_preferred().vertex;
-                int u_partner_rank = compute_rank(u_partner, u_pref_list);
-                // std::cout << "u_partner's rank is " <<  u_partner_rank << " v's rank is " << it2.rank << std::endl;
-                if(u_partner_rank < it2.rank) {
-                    weight -= 1;
-                }
-                else if(u_partner_rank > it2.rank) {
-                    weight += 1;
-                }
-                else {
-                    weight += 0;
-                }
+                weight += 1;
             }
 
             edge_weights[u][v] = weight;
         }
     }
-    std::cout << "edge_weights are fixed for partition B" << std::endl;
+    // std::cout << "edge_weights are fixed for partition B" << std::endl;
 
-    for (auto &it : G->get_A_partition()) {
-        auto v = it.second;
+    for (auto v : VertexSet) {
         edge_weights[v][v] = -is_matched[v];
     }
-
-    for (auto &it : G->get_B_partition()) {
-        auto v = it.second;
-        edge_weights[v][v] = -is_matched[v];
-    }
-    std::cout << "edge_weights are fixed for the self loops" << std::endl;
+    // std::cout << "edge_weights are fixed for the self loops" << std::endl;
 
     // assigning popularity to each vertex
     std::map<VertexPtr, int> popularity;                                             
@@ -160,7 +173,7 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
         }
         // std::cout << v->get_id() << " " << popularity[v] << std::endl;
     }
-    std::cout << "popularity is fixed for proposing partition" << std::endl;
+    // std::cout << "popularity is fixed for proposing partition" << std::endl;
 
     for (auto& it : non_proposing_partition) {
         auto v = it.second;
@@ -172,7 +185,7 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
         }
         // std::cout << v->get_id() << " " << popularity[v] << std::endl;
     }
-    std::cout << "popularity is fixed for non proposing partition" << std::endl;
+    // std::cout << "popularity is fixed for non proposing partition" << std::endl;
 
     // checking if each edge is covered
     bool flag = true;
@@ -188,6 +201,12 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             }
         }
     }
+    for ( auto & v : VertexSet) {
+        if(popularity[v] < edge_weights[v][v]) {
+            flag = false;
+            std::cout << v->get_id() << std::endl;
+        }
+    }
     if(flag) {
         std::cout << "Edges are covered" << std::endl;
     }
@@ -199,7 +218,7 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
     int pop_sum = 0;
     for(auto it : popularity) {
         pop_sum += it.second;
-        std::cout << it.first->get_id() << " level: " << levels[it.first] << " pop: " << it.second << std::endl;
+        // std::cout << it.first->get_id() << " level: " << levels[it.first] << " pop: " << it.second << std::endl;
     }
 
     if(pop_sum == 0) {
@@ -211,7 +230,7 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
     else{
         std::cout << "popularity sum is less than zero\n";
     }
-    std::cout << "popularity sum is " << pop_sum << std::endl;
+    // std::cout << "popularity sum is " << pop_sum << std::endl;
 }
 
 std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::compute_matching() {
@@ -295,9 +314,15 @@ std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::comp
 
             for (const auto& i : partners) {
                 auto v = i.vertex;
-                levels[v] = levels[u] = bookkeep_data[u].level;
+
+                levels[v] = bookkeep_data[u].level;
+                levels[u] = bookkeep_data[u].level;
                 // std::cout << "levels[" << u->get_id() << "] = " << levels[u] << std::endl;
                 // std::cout << "levels[" << v->get_id() << "] = " << levels[v] << std::endl;
+            }
+
+            if (partners.size() == 0) {
+                levels[u] = bookkeep_data[u].level;
             }
         }
         else {

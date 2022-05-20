@@ -1,8 +1,0 @@
-levels[r1] = 0
-levels[h2] = 0
-levels[r2] = 1
-levels[h1] = 1
-Edges are covered
-popularity sum is less than or equal to zero
-r1,h2,2
-r2,h1,1

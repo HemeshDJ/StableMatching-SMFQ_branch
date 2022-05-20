@@ -1,3 +1,5 @@
+Edges are covered
+popularity sum is equal to zero
 a1,b321,11
 a10,b99,265
 a100,b661,35
