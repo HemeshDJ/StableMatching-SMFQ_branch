@@ -51,6 +51,10 @@ public:
     std::shared_ptr<BipartiteGraph> get_reduced_graph();
     
     std::shared_ptr<MatchedPairListType> compute_matching() override;
+
+    void check_popularity(std::shared_ptr<BipartiteGraph> G, 
+        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out) 
+    {}
 };
 
 #endif

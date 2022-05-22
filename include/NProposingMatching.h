@@ -16,6 +16,9 @@ private:
     // maximum level that a vertex can reach
     int max_level;
 
+    // stores level of vertex in the matching
+    std::map<VertexPtr, int> levels;
+
     // remove arbitrary element from list of unmatched vertices
     // and update bookkeep data
     static VertexPtr remove_and_update(FreeListType& free_list, std::map<VertexPtr, VertexBookkeeping>& bookkeep_data);
@@ -36,6 +39,10 @@ public:
     ~NProposingMatching() override = default;
 
     std::shared_ptr<MatchedPairListType> compute_matching() override;
+
+    void check_popularity(std::shared_ptr<BipartiteGraph> G,
+                        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out);
+
 };
 
 #endif

@@ -28,6 +28,9 @@ public:
         std::map<VertexPtr, unsigned int>& cost,
         std::vector<std::vector<int>> &additional_output);
     std::shared_ptr<MatchedPairListType> compute_matching() override;
+    void check_popularity(std::shared_ptr<BipartiteGraph> G, 
+        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out) 
+    {}
     void print_additional_output(std::shared_ptr<BipartiteGraph> G
         , std::vector<std::vector<int>>& additional_output
         , std::vector<std::string>& additional_output_names);

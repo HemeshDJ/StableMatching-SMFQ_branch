@@ -17,6 +17,10 @@ public:
         NProposingMatching npm (get_graph(), is_A_proposing(), 0);
         return npm.compute_matching();
     }
+
+    void check_popularity(std::shared_ptr<BipartiteGraph> G, 
+        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out) 
+    {}
 };
 
 #endif

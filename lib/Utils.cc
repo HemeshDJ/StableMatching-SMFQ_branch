@@ -3,7 +3,6 @@
 #include "GraphReader.h"
 #include <set>
 #include <sstream>
-#include <iostream>
 
 const char* token_to_string(Token tok) {
    static struct {

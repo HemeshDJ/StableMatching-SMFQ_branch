@@ -3,9 +3,7 @@
 #include "Partner.h"
 #include "Utils.h"
 #include <set>
-#include <iostream>
-
-std::map<VertexPtr, int> levels;
+#include <sstream>
 
 NProposingMatching::NProposingMatching(std::shared_ptr<BipartiteGraph> G,
                                        bool A_proposing, int max_level)
@@ -45,8 +43,10 @@ void NProposingMatching::add_matched_partners(std::shared_ptr<MatchedPairListTyp
     add_partner(M, v, u, compute_rank(u, v_pref_list), u_data.level);
 }
 
-void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing)
+void NProposingMatching::check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out)
 {
+    std::stringstream stmp;
+
     const auto& proposing_partition = A_proposing ? G->get_A_partition()
                                                        : G->get_B_partition();
     const auto& non_proposing_partition = A_proposing ? G->get_B_partition()
@@ -79,7 +79,7 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             }
         }
     }
-    // std::cout << "is_matched is fixed" << std::endl;
+    // stmp << "is_matched is fixed" << "\n";
 
     // assigning edge weights to the edges
     std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
@@ -117,7 +117,7 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             edge_weights[u][v] = weight;
         }
     }
-    // std::cout << "edge_weights are fixed for partition A" << std::endl;
+    // stmp << "edge_weights are fixed for partition A" << "\n";
 
     for( auto & it : G->get_B_partition() ) {
         auto u = it.second;
@@ -153,12 +153,12 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
             edge_weights[u][v] = weight;
         }
     }
-    // std::cout << "edge_weights are fixed for partition B" << std::endl;
+    // stmp << "edge_weights are fixed for partition B" << "\n";
 
     for (auto v : VertexSet) {
         edge_weights[v][v] = -is_matched[v];
     }
-    // std::cout << "edge_weights are fixed for the self loops" << std::endl;
+    // stmp << "edge_weights are fixed for the self loops" << "\n";
 
     // assigning popularity to each vertex
     std::map<VertexPtr, int> popularity;                                             
@@ -171,9 +171,9 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
         else if(levels[v] == 1) {
             popularity[v] = (is_matched[v]) ? -1 : 0;
         }
-        // std::cout << v->get_id() << " " << popularity[v] << std::endl;
+        // stmp << v->get_id() << " " << popularity[v] << "\n";
     }
-    // std::cout << "popularity is fixed for proposing partition" << std::endl;
+    // stmp << "popularity is fixed for proposing partition" << "\n";
 
     for (auto& it : non_proposing_partition) {
         auto v = it.second;
@@ -183,9 +183,9 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
         else if(levels[v] == 0) {
             popularity[v] = (is_matched[v]) ? -1 : 0;
         }
-        // std::cout << v->get_id() << " " << popularity[v] << std::endl;
+        // stmp << v->get_id() << " " << popularity[v] << "\n";
     }
-    // std::cout << "popularity is fixed for non proposing partition" << std::endl;
+    // stmp << "popularity is fixed for non proposing partition" << "\n";
 
     // checking if each edge is covered
     bool flag = true;
@@ -197,40 +197,42 @@ void check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<Matching
 
             if(popularity[u] + popularity[v] < edge_weights[v][u]+edge_weights[u][v]) {
                 flag = false;
-                std::cout << u->get_id() << " " << v->get_id() << std::endl;
+                stmp << u->get_id() << " " << v->get_id() << "\n";
             }
         }
     }
     for ( auto & v : VertexSet) {
         if(popularity[v] < edge_weights[v][v]) {
             flag = false;
-            std::cout << v->get_id() << std::endl;
+            stmp << v->get_id() << "\n";
         }
     }
     if(flag) {
-        std::cout << "Edges are covered" << std::endl;
+        stmp << "Edges are covered" << "\n";
     }
     else {
-        std::cout << "Edges are not covered" << std::endl;
+        stmp << "Edges are not covered" << "\n";
     }
 
     // checking if total sum of popularity is 0
     int pop_sum = 0;
     for(auto it : popularity) {
         pop_sum += it.second;
-        // std::cout << it.first->get_id() << " level: " << levels[it.first] << " pop: " << it.second << std::endl;
+        // stmp << it.first->get_id() << " level: " << levels[it.first] << " pop: " << it.second << "\n";
     }
 
     if(pop_sum == 0) {
-        std::cout << "popularity sum is equal to zero\n";
+        stmp << "popularity sum is equal to zero\n";
     }
     else if(pop_sum > 0){
-        std::cout << "popularity sum is greater than zero\n";
+        stmp << "popularity sum is greater than zero\n";
     }
     else{
-        std::cout << "popularity sum is less than zero\n";
+        stmp << "popularity sum is less than zero\n";
     }
-    // std::cout << "popularity sum is " << pop_sum << std::endl;
+    // stmp << "popularity sum is " << pop_sum << "\n";
+
+    out << stmp.str();
 }
 
 std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::compute_matching() {
@@ -317,8 +319,6 @@ std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::comp
 
                 levels[v] = bookkeep_data[u].level;
                 levels[u] = bookkeep_data[u].level;
-                // std::cout << "levels[" << u->get_id() << "] = " << levels[u] << std::endl;
-                // std::cout << "levels[" << v->get_id() << "] = " << levels[v] << std::endl;
             }
 
             if (partners.size() == 0) {
@@ -329,8 +329,6 @@ std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::comp
             levels[u] = bookkeep_data[u].level;
         }
     }
-
-    check_popularity(G,M,is_A_proposing());
 
     /** End New Code **/
 

@@ -18,7 +18,7 @@
 #include <unistd.h>
 
 template<typename T>
-void compute_matching(bool A_proposing, bool signature, const char* input_file, const char* output_file) {
+void compute_matching(bool A_proposing, bool signature, bool test, const char* input_file, const char* output_file) {
     // setup input/output stream as std::cin/std::cout by default
     // if a file is specified use it to read/write
 
@@ -50,6 +50,10 @@ void compute_matching(bool A_proposing, bool signature, const char* input_file, 
     //s.get_statistics(G, M);
     //s.get_smfq_statistics(G, M);
     
+    if(test) {
+        alg.check_popularity(G, M, A_proposing, std::cerr);
+    }
+
     if(signature) {
         print_signature(G, M, std::cout);
     }
@@ -77,6 +81,7 @@ int main(int argc, char* argv[]) {
     bool compute_ehrlq = false;
     bool convert_hr_to_hr2lq = false;
     bool signature = false;
+    bool test = false;
     bool A_proposing = true;
     const char* input_file = nullptr;
     const char* output_file = nullptr;
@@ -86,9 +91,11 @@ int main(int argc, char* argv[]) {
     // -s, -p, and -m flags compute the stable, max-card popular and pop among
     // max-card matchings respectively
     // -r and -h compute the resident and hopsital heuristic for an HRLQ instance
+    // -g prints the signature of the matching
+    // -t computes in test mode
     // -i is the path to the input graph, -o is the path where the matching
     // computed should be stored
-    while ((c = getopt(argc, argv, "ABczdklspmrhyegi:o:")) != -1) {
+    while ((c = getopt(argc, argv, "ABczdklspmrhyegti:o:")) != -1) {
         switch (c) {
             case 'A': A_proposing = true; break;
             case 'B': A_proposing = false; break; 
@@ -105,6 +112,7 @@ int main(int argc, char* argv[]) {
             case 'y': compute_yhrlq = true; break;
             case 'e': compute_ehrlq = true; break;
             case 'g': signature = true; break;
+            case 't': test = true; break;
             case 'i': input_file = optarg; break;
             case 'o': output_file = optarg; break;
             case '?':
@@ -120,29 +128,29 @@ int main(int argc, char* argv[]) {
         }
     }
     if (compute_stable) {
-        compute_matching<StableMarriage>(A_proposing, signature, input_file, output_file);
+        compute_matching<StableMarriage>(A_proposing, signature, test, input_file, output_file);
     }else if (convert_hr_to_hr2lq) {
-        compute_matching<Convert_HR_to_HR2LQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<Convert_HR_to_HR2LQ>(A_proposing, signature, test, input_file, output_file);
     }else if (compute_direct_sm2lq) {
-        compute_matching<DirectApproachHR2LQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<DirectApproachHR2LQ>(A_proposing, signature, test, input_file, output_file);
     }else if (compute_exact_exp_smfq) {
-        compute_matching<Exact_Exponential_SMFQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<Exact_Exponential_SMFQ>(A_proposing, signature, test, input_file, output_file);
     }else if (compute_lp_smfq) {
-        compute_matching<LpApproxSMFQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<LpApproxSMFQ>(A_proposing, signature, test, input_file, output_file);
     }else if (compute_sea_popular) {
-        compute_matching<SEAPopularHRLQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<SEAPopularHRLQ>(A_proposing, signature, test, input_file, output_file);
     }else if (compute_popular) {
-        compute_matching<MaxCardPopular>(A_proposing, signature, input_file, output_file);
+        compute_matching<MaxCardPopular>(A_proposing, signature, test, input_file, output_file);
     } else if (compute_max_card) {
-        compute_matching<PopularAmongMaxCard>(A_proposing, signature, input_file, output_file);
+        compute_matching<PopularAmongMaxCard>(A_proposing, signature, test, input_file, output_file);
     } else if (compute_rhrlq) {
-        compute_matching<RHeuristicHRLQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<RHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
     } else if (compute_hhrlq) {
-        compute_matching<HHeuristicHRLQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<HHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
     } else if (compute_yhrlq) {
-        compute_matching<YokoiEnvyfreeHRLQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<YokoiEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
     } else if (compute_ehrlq) {
-        compute_matching<MaximalEnvyfreeHRLQ>(A_proposing, signature, input_file, output_file);
+        compute_matching<MaximalEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
     }
 
     return 0;

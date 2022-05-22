@@ -19,6 +19,6 @@
 
 ./graphmatching -A -p -i ../resources/one2one.txt -o ../resources/outone2one1.txt
 
-8) ./graphmatching -A -p -t -o ../resources/test/TC0.txt
+8) Added -t parameter for testing if matching is popular
 
    Runs testcases in the suite on p. Logs on the output file whether the testcases ran successfully, and gives dual signature for popular matchings.
