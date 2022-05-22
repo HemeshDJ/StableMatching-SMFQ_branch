@@ -50,7 +50,12 @@ void compute_matching(bool A_proposing, bool signature, const char* input_file, 
     //s.get_statistics(G, M);
     //s.get_smfq_statistics(G, M);
     
-    signature ? print_signature(G, M, std::cout) : print_matching(G, M, std::cout);
+    if(signature) {
+        print_signature(G, M, std::cout);
+    }
+    else {
+        print_matching(G, M, std::cout);
+    }
 
     // restore buffers
     std::cin.rdbuf(cin_buf);
@@ -99,7 +104,7 @@ int main(int argc, char* argv[]) {
             case 'h': compute_hhrlq = true; break;
             case 'y': compute_yhrlq = true; break;
             case 'e': compute_ehrlq = true; break;
-            case 'g': signature = true;break;
+            case 'g': signature = true; break;
             case 'i': input_file = optarg; break;
             case 'o': output_file = optarg; break;
             case '?':

@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: graphmatching
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,9 +49,9 @@ cmake_ninja_workdir = D$:/IITM/Projects/StableMatchingProject/StableMatching-SMF
 
 build cmake_object_order_depends_target_graphmatching: phony || cmake_object_order_depends_target_graph
 
-build CMakeFiles/graphmatching.dir/main.cc.obj: CXX_COMPILER__graphmatching_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/main.cc || cmake_object_order_depends_target_graphmatching
+build CMakeFiles/graphmatching.dir/main.cc.obj: CXX_COMPILER__graphmatching_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/main.cc || cmake_object_order_depends_target_graphmatching
   DEP_FILE = CMakeFiles\graphmatching.dir\main.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include
   OBJECT_DIR = CMakeFiles\graphmatching.dir
   OBJECT_FILE_DIR = CMakeFiles\graphmatching.dir
@@ -59,7 +64,8 @@ build CMakeFiles/graphmatching.dir/main.cc.obj: CXX_COMPILER__graphmatching_ D$:
 #############################################
 # Link the executable graphmatching.exe
 
-build graphmatching.exe: CXX_EXECUTABLE_LINKER__graphmatching_ CMakeFiles/graphmatching.dir/main.cc.obj | lib/libgraph.a || lib/libgraph.a
+build graphmatching.exe: CXX_EXECUTABLE_LINKER__graphmatching_Debug CMakeFiles/graphmatching.dir/main.cc.obj | lib/libgraph.a || lib/libgraph.a
+  FLAGS = -g
   LINK_LIBRARIES = lib/libgraph.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\graphmatching.dir
   POST_BUILD = cd .
@@ -148,170 +154,170 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_graph: phony || lib/CMakeFiles/graph.dir
 
-build lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/MatchingAlgorithm.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/MatchingAlgorithm.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\MatchingAlgorithm.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/NProposingMatching.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/NProposingMatching.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\NProposingMatching.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/YokoiEnvyfreeHRLQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/YokoiEnvyfreeHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\YokoiEnvyfreeHRLQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/MaximalEnvyfreeHRLQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/MaximalEnvyfreeHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\MaximalEnvyfreeHRLQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/HHeuristicHRLQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/HHeuristicHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\HHeuristicHRLQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/RHeuristicHRLQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/RHeuristicHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\RHeuristicHRLQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/BipartiteGraph.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/BipartiteGraph.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\BipartiteGraph.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Partner.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Partner.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Partner.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Partner.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Partner.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/PartnerList.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/PartnerList.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/PartnerList.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/PartnerList.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\PartnerList.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/PreferenceList.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/PreferenceList.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/PreferenceList.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/PreferenceList.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\PreferenceList.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Vertex.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Vertex.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Vertex.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Vertex.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Vertex.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/GraphReader.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/GraphReader.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/GraphReader.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/GraphReader.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\GraphReader.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Utils.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Utils.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Utils.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Utils.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Utils.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/RelaxedStable.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/RelaxedStable.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/RelaxedStable.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/RelaxedStable.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\RelaxedStable.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Statistics.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Statistics.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Statistics.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Statistics.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Statistics.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/SEAPopularHRLQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/SEAPopularHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\SEAPopularHRLQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/LpApproxSMFQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/LpApproxSMFQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\LpApproxSMFQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Exact_Exponential_SMFQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Exact_Exponential_SMFQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Exact_Exponential_SMFQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/DirectApproachHR2LQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/DirectApproachHR2LQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\DirectApproachHR2LQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Node.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Node.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Node.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Node.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Node.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Edge.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Edge.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Edge.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Edge.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Edge.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Graph.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Graph.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Graph.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Graph.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Graph.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/HApproxSMFQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/HApproxSMFQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\HApproxSMFQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
 
-build lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.obj: CXX_COMPILER__graph_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Convert_HR_to_HR2LQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Convert_HR_to_HR2LQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
@@ -324,7 +330,8 @@ build lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.obj: CXX_COMPILER__graph_ 
 #############################################
 # Link the static library lib\libgraph.a
 
-build lib/libgraph.a: CXX_STATIC_LIBRARY_LINKER__graph_ lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.obj lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.obj lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.obj lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.obj lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj lib/CMakeFiles/graph.dir/Partner.cc.obj lib/CMakeFiles/graph.dir/PartnerList.cc.obj lib/CMakeFiles/graph.dir/PreferenceList.cc.obj lib/CMakeFiles/graph.dir/Vertex.cc.obj lib/CMakeFiles/graph.dir/GraphReader.cc.obj lib/CMakeFiles/graph.dir/Utils.cc.obj lib/CMakeFiles/graph.dir/RelaxedStable.cc.obj lib/CMakeFiles/graph.dir/Statistics.cc.obj lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.obj lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.obj lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.obj lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.obj lib/CMakeFiles/graph.dir/Node.cc.obj lib/CMakeFiles/graph.dir/Edge.cc.obj lib/CMakeFiles/graph.dir/Graph.cc.obj lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.obj lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.obj
+build lib/libgraph.a: CXX_STATIC_LIBRARY_LINKER__graph_Debug lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.obj lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.obj lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.obj lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.obj lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj lib/CMakeFiles/graph.dir/Partner.cc.obj lib/CMakeFiles/graph.dir/PartnerList.cc.obj lib/CMakeFiles/graph.dir/PreferenceList.cc.obj lib/CMakeFiles/graph.dir/Vertex.cc.obj lib/CMakeFiles/graph.dir/GraphReader.cc.obj lib/CMakeFiles/graph.dir/Utils.cc.obj lib/CMakeFiles/graph.dir/RelaxedStable.cc.obj lib/CMakeFiles/graph.dir/Statistics.cc.obj lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.obj lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.obj lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.obj lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.obj lib/CMakeFiles/graph.dir/Node.cc.obj lib/CMakeFiles/graph.dir/Edge.cc.obj lib/CMakeFiles/graph.dir/Graph.cc.obj lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.obj lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.obj
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -411,79 +418,79 @@ build lib/install/strip: phony lib/CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_testrunner: phony || cmake_object_order_depends_target_graph
 
-build test/CMakeFiles/testrunner.dir/TestDefs.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestDefs.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestDefs.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestDefs.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestDefs.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestRunner.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestRunner.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestRunner.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestRunner.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestRunner.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestPreferenceList.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestPreferenceList.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestPreferenceList.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestPartnerList.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestPartnerList.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestPartnerList.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestPartnerList.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestPartnerList.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestUtils.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestUtils.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestUtils.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestUtils.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestUtils.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestStableMarriage.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestStableMarriage.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestStableMarriage.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestPopular.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestPopular.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestPopular.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestPopular.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestPopular.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestHR.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestHR.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestHR.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestHR.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestHR.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestYokoi.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestYokoi.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestYokoi.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestYokoi.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestYokoi.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestMaximalEnvyfreeHRLQ.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestMaximalEnvyfreeHRLQ.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestMaximalEnvyfreeHRLQ.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
 
-build test/CMakeFiles/testrunner.dir/TestParser.cc.obj: CXX_COMPILER__testrunner_ D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestParser.cc || cmake_object_order_depends_target_testrunner
+build test/CMakeFiles/testrunner.dir/TestParser.cc.obj: CXX_COMPILER__testrunner_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/TestParser.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test\CMakeFiles\testrunner.dir\TestParser.cc.obj.d
-  FLAGS = -Wall -O0 -g
+  FLAGS = -g   -Wall -O0 -g -std=gnu++17
   INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test/include
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   OBJECT_FILE_DIR = test\CMakeFiles\testrunner.dir
@@ -496,7 +503,8 @@ build test/CMakeFiles/testrunner.dir/TestParser.cc.obj: CXX_COMPILER__testrunner
 #############################################
 # Link the executable test\testrunner.exe
 
-build test/testrunner.exe: CXX_EXECUTABLE_LINKER__testrunner_ test/CMakeFiles/testrunner.dir/TestDefs.cc.obj test/CMakeFiles/testrunner.dir/TestRunner.cc.obj test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.obj test/CMakeFiles/testrunner.dir/TestPartnerList.cc.obj test/CMakeFiles/testrunner.dir/TestUtils.cc.obj test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.obj test/CMakeFiles/testrunner.dir/TestPopular.cc.obj test/CMakeFiles/testrunner.dir/TestHR.cc.obj test/CMakeFiles/testrunner.dir/TestYokoi.cc.obj test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.obj test/CMakeFiles/testrunner.dir/TestParser.cc.obj | lib/libgraph.a || lib/libgraph.a
+build test/testrunner.exe: CXX_EXECUTABLE_LINKER__testrunner_Debug test/CMakeFiles/testrunner.dir/TestDefs.cc.obj test/CMakeFiles/testrunner.dir/TestRunner.cc.obj test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.obj test/CMakeFiles/testrunner.dir/TestPartnerList.cc.obj test/CMakeFiles/testrunner.dir/TestUtils.cc.obj test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.obj test/CMakeFiles/testrunner.dir/TestPopular.cc.obj test/CMakeFiles/testrunner.dir/TestHR.cc.obj test/CMakeFiles/testrunner.dir/TestYokoi.cc.obj test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.obj test/CMakeFiles/testrunner.dir/TestParser.cc.obj | lib/libgraph.a || lib/libgraph.a
+  FLAGS = -g
   LINK_LIBRARIES = lib/libgraph.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = test\CMakeFiles\testrunner.dir
   POST_BUILD = cd .
@@ -620,14 +628,14 @@ build test/all: phony test/testrunner.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################
