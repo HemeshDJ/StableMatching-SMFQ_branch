@@ -37,9 +37,9 @@ public:
         std::vector<std::vector<std::vector<int>>>& cost_matrix,
         int present_index, int req_cost, std::vector<int>& temp_tuple);
     std::shared_ptr<MatchedPairListType> compute_matching() override;
-    void check_popularity(std::shared_ptr<BipartiteGraph> G, 
+    std::pair<int,int> check_popularity(std::shared_ptr<BipartiteGraph> G, 
         std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out) 
-    {}
+    { return {-1,-1}; }
 };
 
 #endif

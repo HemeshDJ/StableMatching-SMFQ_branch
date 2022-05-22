@@ -51,7 +51,13 @@ void compute_matching(bool A_proposing, bool signature, bool test, const char* i
     //s.get_smfq_statistics(G, M);
     
     if(test) {
-        alg.check_popularity(G, M, A_proposing, std::cerr);
+        std::pair<int,int> flags = alg.check_popularity(G, M, A_proposing, std::cerr);
+        if(!flags.first)
+            std::cerr << "Edges not covered. ";
+        if(flags.second)
+            std::cerr << "Popularity sum is non-zero, equal to " << flags.second << ". ";
+        if(flags.first && !flags.second)
+            std::cerr << "Passed. Certificate issued!";
     }
 
     if(signature) {

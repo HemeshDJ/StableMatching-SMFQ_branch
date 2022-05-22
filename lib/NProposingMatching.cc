@@ -43,7 +43,7 @@ void NProposingMatching::add_matched_partners(std::shared_ptr<MatchedPairListTyp
     add_partner(M, v, u, compute_rank(u, v_pref_list), u_data.level);
 }
 
-void NProposingMatching::check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out)
+std::pair<int,int> NProposingMatching::check_popularity(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out)
 {
     std::stringstream stmp;
 
@@ -188,7 +188,7 @@ void NProposingMatching::check_popularity(std::shared_ptr<BipartiteGraph> G,std:
     // stmp << "popularity is fixed for non proposing partition" << "\n";
 
     // checking if each edge is covered
-    bool flag = true;
+    int flag = 1;
     for( auto & it : G->get_A_partition() ) {
         auto u = it.second;
 
@@ -196,23 +196,23 @@ void NProposingMatching::check_popularity(std::shared_ptr<BipartiteGraph> G,std:
             auto v = it2.vertex;
 
             if(popularity[u] + popularity[v] < edge_weights[v][u]+edge_weights[u][v]) {
-                flag = false;
+                flag = 0;
                 stmp << u->get_id() << " " << v->get_id() << "\n";
             }
         }
     }
     for ( auto & v : VertexSet) {
         if(popularity[v] < edge_weights[v][v]) {
-            flag = false;
+            flag = 0;
             stmp << v->get_id() << "\n";
         }
     }
-    if(flag) {
-        stmp << "Edges are covered" << "\n";
-    }
-    else {
-        stmp << "Edges are not covered" << "\n";
-    }
+    // if(flag) {
+    //     stmp << "Edges are covered" << "\n";
+    // }
+    // else {
+    //     stmp << "Edges are not covered" << "\n";
+    // }
 
     // checking if total sum of popularity is 0
     int pop_sum = 0;
@@ -221,18 +221,20 @@ void NProposingMatching::check_popularity(std::shared_ptr<BipartiteGraph> G,std:
         // stmp << it.first->get_id() << " level: " << levels[it.first] << " pop: " << it.second << "\n";
     }
 
-    if(pop_sum == 0) {
-        stmp << "popularity sum is equal to zero\n";
-    }
-    else if(pop_sum > 0){
-        stmp << "popularity sum is greater than zero\n";
-    }
-    else{
-        stmp << "popularity sum is less than zero\n";
-    }
+    // if(pop_sum == 0) {
+    //     stmp << "popularity sum is equal to zero\n";
+    // }
+    // else if(pop_sum > 0){
+    //     stmp << "popularity sum is greater than zero\n";
+    // }
+    // else{
+    //     stmp << "popularity sum is less than zero\n";
+    // }
     // stmp << "popularity sum is " << pop_sum << "\n";
 
     out << stmp.str();
+
+    return {flag, pop_sum};
 }
 
 std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::compute_matching() {

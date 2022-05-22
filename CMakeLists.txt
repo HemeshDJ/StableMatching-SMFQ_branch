@@ -19,4 +19,10 @@ add_executable(graphmatching main.cc "include/LpApproxSMFQ.h" "include/Exact_Exp
 "include/HApproxSMFQ.h" "include/Convert_HR_to_HR2LQ.h")
 target_link_libraries(graphmatching graph)
 
+add_executable(tester test.cc "include/LpApproxSMFQ.h" "include/Exact_Exponential_SMFQ.h" 
+"include/DirectApproachHR2LQ.h" "include/Node.h" "include/Edge.h" "include/Graph.h" 
+"include/HApproxSMFQ.h" "include/Convert_HR_to_HR2LQ.h")
+target_link_libraries(tester graph)
+
 install(TARGETS graphmatching RUNTIME DESTINATION bin)
+install(TARGETS tester RUNTIME DESTINATION bin)

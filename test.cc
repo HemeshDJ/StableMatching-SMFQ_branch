@@ -15,10 +15,12 @@
 #include "GraphReader.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include <unistd.h>
 
-template<typename T>
-void compute_matching(bool A_proposing, bool signature, const char* input_file, const char* output_file, const char* log_file = nullptr) {
+std::stringstream stmp;
+
+void compute_matching(bool A_proposing, const char* input_file, const char* log_file) {
     // setup input/output stream as std::cin/std::cout by default
     // if a file is specified use it to read/write
 
@@ -26,21 +28,17 @@ void compute_matching(bool A_proposing, bool signature, const char* input_file, 
     auto cout_buf = std::cout.rdbuf(); // save pointer to std::cout buffer
 
     std::ifstream filein(input_file);
-    std::ofstream fileout(output_file);
+    // std::ofstream filelog(log_file);
 
     if (input_file) {
         std::cin.rdbuf(filein.rdbuf());
-    }
-
-    if (output_file) {
-        std::cout.rdbuf(fileout.rdbuf());
     }
 
     std::shared_ptr<BipartiteGraph> G = GraphReader(std::cin).read_graph();
     if (G == NULL) {
         return;
     }
-    T alg(G, A_proposing);
+    MaxCardPopular alg(G, A_proposing);
     auto M = alg.compute_matching();
 
     // To get statistics of output matching
@@ -49,12 +47,15 @@ void compute_matching(bool A_proposing, bool signature, const char* input_file, 
     //Statistics s;
     //s.get_statistics(G, M);
     //s.get_smfq_statistics(G, M);
-    
-    if(signature) {
-        print_signature(G, M, std::cout);
-    }
-    else 
-        print_matching(G, M, std::cout);
+
+    std::pair<int,int> flags = alg.check_popularity(G, M, A_proposing, std::cout);
+    if(!flags.first)
+        stmp << "Edges not covered. ";
+    if(flags.second)
+        stmp << "Popularity sum is non-zero, equal to " << flags.second << ". ";
+    if(flags.first && !flags.second)
+        stmp << "Passed. Certificate issued!";
+    stmp << std::endl;
 
     // restore buffers
     std::cin.rdbuf(cin_buf);
@@ -63,18 +64,6 @@ void compute_matching(bool A_proposing, bool signature, const char* input_file, 
 
 int main(int argc, char* argv[]) {
     int c = 0;
-    bool compute_sea_popular = false;
-    bool compute_direct_sm2lq = false;
-    bool compute_lp_smfq = false;
-    bool compute_exact_exp_smfq = false;
-    bool compute_stable = false;
-    bool compute_popular = false;
-    bool compute_max_card = false;
-    bool compute_rhrlq = false;
-    bool compute_hhrlq = false;
-    bool compute_yhrlq = false;
-    bool compute_ehrlq = false;
-    bool convert_hr_to_hr2lq = false;
     bool signature = false;
     bool A_proposing = true;
     bool run_test_suite = false;
@@ -89,30 +78,15 @@ int main(int argc, char* argv[]) {
     // -i is the path to the input graph, -o is the path where the matching
     // computed should be stored
     // -t is to run the test suite and return the tests that failed
-    while ((c = getopt(argc, argv, "ABczdklspmrhyegti:o:")) != -1) {
+    while ((c = getopt(argc, argv, "ABczdklspmrhyegto:")) != -1) {
         switch (c) {
             case 'A': A_proposing = true; break;
             case 'B': A_proposing = false; break; 
-            case 'c': convert_hr_to_hr2lq = true; break;
-            case 'd': compute_direct_sm2lq = true; break;
-            case 'k': compute_exact_exp_smfq = true; break;
-            case 'l': compute_lp_smfq = true; break;
-            case 'z': compute_sea_popular = true; break;
-            case 's': compute_stable = true; break;
-            case 'p': compute_popular = true; break;
-            case 'm': compute_max_card = true; break;
-            case 'r': compute_rhrlq = true; break;
-            case 'h': compute_hhrlq = true; break;
-            case 'y': compute_yhrlq = true; break;
-            case 'e': compute_ehrlq = true; break;
             case 'g': signature = true; break;
             case 't': run_test_suite = true; break;
-            case 'i': input_file = optarg; break;
             case 'o': output_file = optarg; break;
             case '?':
-                if (optopt == 'i' && !run_test_suite) {
-                    std::cerr << "Option -i requires an argument.\n";
-                } else if (optopt == 'o') {
+                if (optopt == 'o') {
                     std::cerr << "Option -o requires an argument.\n";
                 } else {
                     std::cerr << "Unknown option: " << static_cast<char>(optopt) << '\n';
@@ -121,17 +95,39 @@ int main(int argc, char* argv[]) {
             default: break;
         }
     }
-    char matching_dump[] = "../resources/test/dumpfile.txt";
+
+    std::ofstream filelog(output_file);    
     for(int i=1; i<=4; i++)
     {
-        char inp_file[] = "../testcases/OneToOneX/TCY.txt";
+        char inp_file[] = "../testsuite/input/OneToOneX/TCY.txt";
+        inp_file[27] = '0' + i;
+        for(int j=0; j<10; j++)
+        {
+            inp_file[31] = '0' + j;  
+            input_file = inp_file;
+
+            // filelog.seekp(0, std::ios::end);
+            stmp << input_file << " : ";
+            compute_matching(A_proposing, input_file, output_file);
+        }
+    }
+
+    filelog << stmp.str();
+
+    return 0;
+
+    for(int i=1; i<=4; i++)
+    {
+        char inp_file[] = "../testsuite/input/ManyToOneX/TCY.txt";
         inp_file[18] = '0' + i;
         for(int j=0; j<10; j++)
         {
             inp_file[22] = '0' + j;  
             input_file = inp_file;
-
-            compute_matching<MaxCardPopular>(A_proposing, signature, input_file, output_file);
+            
+            // filelog.seekp(0, std::ios::end);
+            stmp << input_file << " : ";
+            compute_matching(A_proposing, input_file, output_file);
         }
     }
 
