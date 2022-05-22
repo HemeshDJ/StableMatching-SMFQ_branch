@@ -20,7 +20,7 @@
 
 std::stringstream stmp;
 
-void compute_matching(bool A_proposing, const char* input_file, const char* log_file) {
+void compute_matching(bool A_proposing, const char* input_file) {
     // setup input/output stream as std::cin/std::cout by default
     // if a file is specified use it to read/write
 
@@ -28,7 +28,6 @@ void compute_matching(bool A_proposing, const char* input_file, const char* log_
     auto cout_buf = std::cout.rdbuf(); // save pointer to std::cout buffer
 
     std::ifstream filein(input_file);
-    // std::ofstream filelog(log_file);
 
     if (input_file) {
         std::cin.rdbuf(filein.rdbuf());
@@ -64,26 +63,17 @@ void compute_matching(bool A_proposing, const char* input_file, const char* log_
 
 int main(int argc, char* argv[]) {
     int c = 0;
-    bool signature = false;
     bool A_proposing = true;
-    bool run_test_suite = false;
     const char* input_file = nullptr;
     const char* output_file = nullptr;
 
     opterr = 0;
     // choose the proposing partition using -A and -B
-    // -s, -p, and -m flags compute the stable, max-card popular and pop among
-    // max-card matchings respectively
-    // -r and -h compute the resident and hopsital heuristic for an HRLQ instance
-    // -i is the path to the input graph, -o is the path where the matching
-    // computed should be stored
-    // -t is to run the test suite and return the tests that failed
-    while ((c = getopt(argc, argv, "ABczdklspmrhyegto:")) != -1) {
+    // -o is the path where the matching computed should be stored
+    while ((c = getopt(argc, argv, "ABo:")) != -1) {
         switch (c) {
             case 'A': A_proposing = true; break;
             case 'B': A_proposing = false; break; 
-            case 'g': signature = true; break;
-            case 't': run_test_suite = true; break;
             case 'o': output_file = optarg; break;
             case '?':
                 if (optopt == 'o') {
@@ -106,15 +96,10 @@ int main(int argc, char* argv[]) {
             inp_file[31] = '0' + j;  
             input_file = inp_file;
 
-            // filelog.seekp(0, std::ios::end);
             stmp << input_file << " : ";
-            compute_matching(A_proposing, input_file, output_file);
+            compute_matching(A_proposing, input_file);
         }
     }
-
-    filelog << stmp.str();
-
-    return 0;
 
     for(int i=1; i<=4; i++)
     {
@@ -125,11 +110,12 @@ int main(int argc, char* argv[]) {
             inp_file[22] = '0' + j;  
             input_file = inp_file;
             
-            // filelog.seekp(0, std::ios::end);
             stmp << input_file << " : ";
-            compute_matching(A_proposing, input_file, output_file);
+            compute_matching(A_proposing, input_file);
         }
     }
+
+    filelog << stmp.str();
 
     return 0;
 }
