@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
     }
 
     std::ofstream filelog(output_file);    
-    for(int i=1; i<=4; i++)
+    for(int i=1; i<=1; i++)
     {
         char inp_file[] = "../testsuite/input/OneToOneX/TCY.txt";
         inp_file[27] = '0' + i;
@@ -101,13 +101,13 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    for(int i=1; i<=4; i++)
+    for(int i=1; i<=1; i++)
     {
         char inp_file[] = "../testsuite/input/ManyToOneX/TCY.txt";
-        inp_file[18] = '0' + i;
+        inp_file[28] = '0' + i;
         for(int j=0; j<10; j++)
         {
-            inp_file[22] = '0' + j;  
+            inp_file[32] = '0' + j;  
             input_file = inp_file;
             
             stmp << input_file << " : ";
