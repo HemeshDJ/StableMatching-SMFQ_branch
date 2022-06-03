@@ -25,6 +25,7 @@ The executable takes a set of parameters to compute the desired matching:
 	-m -- compute a maximum cardinality matching
 	-h -- compute a feasible matching in a given HRLQ instance
 	-e -- compute a maximal envy free matching in an HRLQ instance
+	-g -- compute the signature of the matching
 	-y -- compute an envy free matching using Yokoi's algorithm in an HRLQ instance
 	-d -- compute popular matching for HR2LQ instance using reduction approach
 	-k -- compute matching using exact exponential algorithm for SMFQ instances
