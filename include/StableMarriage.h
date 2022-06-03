@@ -18,9 +18,8 @@ public:
         return npm.compute_matching();
     }
 
-    std::pair<int,int> checker(std::shared_ptr<BipartiteGraph> G, 
-        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing) 
-    {   return {-1,-1}; }
+    void checker(std::shared_ptr<BipartiteGraph> G, 
+        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream &out);
 };
 
 #endif

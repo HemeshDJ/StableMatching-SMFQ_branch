@@ -20,7 +20,7 @@
 
 std::stringstream stmp;
 
-void compute_matching(bool A_proposing, const char* input_file) {
+void compute_matching(bool A_proposing, const char* input_file, const char* output_file) {
     // setup input/output stream as std::cin/std::cout by default
     // if a file is specified use it to read/write
 
@@ -28,9 +28,14 @@ void compute_matching(bool A_proposing, const char* input_file) {
     auto cout_buf = std::cout.rdbuf(); // save pointer to std::cout buffer
 
     std::ifstream filein(input_file);
+    std::ofstream fileout(output_file);
 
     if (input_file) {
         std::cin.rdbuf(filein.rdbuf());
+    }
+
+    if (output_file) {
+        std::cout.rdbuf(fileout.rdbuf());
     }
 
     std::shared_ptr<BipartiteGraph> G = GraphReader(std::cin).read_graph();
@@ -47,14 +52,7 @@ void compute_matching(bool A_proposing, const char* input_file) {
     //s.get_statistics(G, M);
     //s.get_smfq_statistics(G, M);
 
-    std::pair<int,int> flags = alg.checker(G, M, A_proposing);
-    if(!flags.first)
-        stmp << "Edges not covered. ";
-    if(flags.second)
-        stmp << "Popularity sum is non-zero, equal to " << flags.second << ". ";
-    if(flags.first && !flags.second)
-        stmp << "Passed. Certificate issued!";
-    stmp << std::endl;
+    alg.checker(G, M, A_proposing,std::cout);
 
     // restore buffers
     std::cin.rdbuf(cin_buf);
@@ -86,36 +84,36 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    std::ofstream filelog(output_file);    
+    // std::ofstream filelog(output_file);    
     for(int i=1; i<=1; i++)
     {
         char inp_file[] = "../testsuite/input/OneToOneX/TCY.txt";
         inp_file[27] = '0' + i;
-        for(int j=0; j<10; j++)
+        for(int j=0; j<1; j++)
         {
             inp_file[31] = '0' + j;  
             input_file = inp_file;
 
-            stmp << input_file << " : ";
-            compute_matching(A_proposing, input_file);
+            // stmp << input_file << " : ";
+            compute_matching(A_proposing, input_file, output_file);
         }
     }
 
-    for(int i=1; i<=1; i++)
-    {
-        char inp_file[] = "../testsuite/input/ManyToOneX/TCY.txt";
-        inp_file[28] = '0' + i;
-        for(int j=0; j<10; j++)
-        {
-            inp_file[32] = '0' + j;  
-            input_file = inp_file;
+    // for(int i=1; i<=4; i++)
+    // {
+    //     char inp_file[] = "../testsuite/input/ManyToOneX/TCY.txt";
+    //     inp_file[28] = '0' + i;
+    //     for(int j=0; j<10; j++)
+    //     {
+    //         inp_file[32] = '0' + j;  
+    //         input_file = inp_file;
             
-            stmp << input_file << " : ";
-            compute_matching(A_proposing, input_file);
-        }
-    }
+    //         // stmp << input_file << " : ";
+    //         compute_matching(A_proposing, input_file, output_file);
+    //     }
+    // }
 
-    filelog << stmp.str();
+    // filelog << stmp.str();
 
     return 0;
 }

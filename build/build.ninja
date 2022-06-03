@@ -50,8 +50,6 @@ build CMakeFiles/graphmatching.dir/main.cc.o: CXX_COMPILER__graphmatching_ /c/Us
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include
   OBJECT_DIR = CMakeFiles/graphmatching.dir
   OBJECT_FILE_DIR = CMakeFiles/graphmatching.dir
-  TARGET_COMPILE_PDB = CMakeFiles/graphmatching.dir/
-  TARGET_PDB = graphmatching.pdb
 
 
 # =============================================================================
@@ -67,10 +65,9 @@ build graphmatching.exe: CXX_EXECUTABLE_LINKER__graphmatching_ CMakeFiles/graphm
   OBJECT_DIR = CMakeFiles/graphmatching.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/graphmatching.dir/
   TARGET_FILE = graphmatching.exe
   TARGET_IMPLIB = libgraphmatching.dll.a
-  TARGET_PDB = graphmatching.pdb
+  TARGET_PDB = graphmatching.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target tester
@@ -87,8 +84,6 @@ build CMakeFiles/tester.dir/test.cc.o: CXX_COMPILER__tester_ /c/Users/CAd_C/Docu
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include
   OBJECT_DIR = CMakeFiles/tester.dir
   OBJECT_FILE_DIR = CMakeFiles/tester.dir
-  TARGET_COMPILE_PDB = CMakeFiles/tester.dir/
-  TARGET_PDB = tester.pdb
 
 
 # =============================================================================
@@ -104,10 +99,9 @@ build tester.exe: CXX_EXECUTABLE_LINKER__tester_ CMakeFiles/tester.dir/test.cc.o
   OBJECT_DIR = CMakeFiles/tester.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/tester.dir/
   TARGET_FILE = tester.exe
   TARGET_IMPLIB = libtester.dll.a
-  TARGET_PDB = tester.pdb
+  TARGET_PDB = tester.exe.dbg
 
 
 #############################################
@@ -195,8 +189,6 @@ build lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.o: CXX_COMPILER__graph_ /c/U
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/NProposingMatching.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/NProposingMatching.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/NProposingMatching.cc.o.d
@@ -204,8 +196,13 @@ build lib/CMakeFiles/graph.dir/NProposingMatching.cc.o: CXX_COMPILER__graph_ /c/
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
+
+build lib/CMakeFiles/graph.dir/StableMarriage.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/StableMarriage.cc || cmake_object_order_depends_target_graph
+  DEP_FILE = lib/CMakeFiles/graph.dir/StableMarriage.cc.o.d
+  FLAGS = -Wall -O0 -g
+  INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
+  OBJECT_DIR = lib/CMakeFiles/graph.dir
+  OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
 
 build lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/YokoiEnvyfreeHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.o.d
@@ -213,8 +210,6 @@ build lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.o: CXX_COMPILER__graph_ /c/U
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/MaximalEnvyfreeHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.o.d
@@ -222,8 +217,6 @@ build lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.o: CXX_COMPILER__graph_ /c
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/HHeuristicHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.o.d
@@ -231,8 +224,6 @@ build lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.o: CXX_COMPILER__graph_ /c/User
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/RHeuristicHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.o.d
@@ -240,8 +231,6 @@ build lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.o: CXX_COMPILER__graph_ /c/User
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/BipartiteGraph.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/BipartiteGraph.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/BipartiteGraph.cc.o.d
@@ -249,8 +238,6 @@ build lib/CMakeFiles/graph.dir/BipartiteGraph.cc.o: CXX_COMPILER__graph_ /c/User
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Partner.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Partner.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Partner.cc.o.d
@@ -258,8 +245,6 @@ build lib/CMakeFiles/graph.dir/Partner.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/PartnerList.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/PartnerList.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/PartnerList.cc.o.d
@@ -267,8 +252,6 @@ build lib/CMakeFiles/graph.dir/PartnerList.cc.o: CXX_COMPILER__graph_ /c/Users/C
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/PreferenceList.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/PreferenceList.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/PreferenceList.cc.o.d
@@ -276,8 +259,6 @@ build lib/CMakeFiles/graph.dir/PreferenceList.cc.o: CXX_COMPILER__graph_ /c/User
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Vertex.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Vertex.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Vertex.cc.o.d
@@ -285,8 +266,6 @@ build lib/CMakeFiles/graph.dir/Vertex.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/GraphReader.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/GraphReader.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/GraphReader.cc.o.d
@@ -294,8 +273,6 @@ build lib/CMakeFiles/graph.dir/GraphReader.cc.o: CXX_COMPILER__graph_ /c/Users/C
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Utils.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Utils.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Utils.cc.o.d
@@ -303,8 +280,6 @@ build lib/CMakeFiles/graph.dir/Utils.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/D
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/RelaxedStable.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/RelaxedStable.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/RelaxedStable.cc.o.d
@@ -312,8 +287,6 @@ build lib/CMakeFiles/graph.dir/RelaxedStable.cc.o: CXX_COMPILER__graph_ /c/Users
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Statistics.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Statistics.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Statistics.cc.o.d
@@ -321,8 +294,6 @@ build lib/CMakeFiles/graph.dir/Statistics.cc.o: CXX_COMPILER__graph_ /c/Users/CA
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/SEAPopularHRLQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.o.d
@@ -330,8 +301,6 @@ build lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.o: CXX_COMPILER__graph_ /c/User
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/LpApproxSMFQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.o.d
@@ -339,8 +308,6 @@ build lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.o: CXX_COMPILER__graph_ /c/Users/
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Exact_Exponential_SMFQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.o.d
@@ -348,8 +315,6 @@ build lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.o: CXX_COMPILER__graph_
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/DirectApproachHR2LQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.o.d
@@ -357,8 +322,6 @@ build lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.o: CXX_COMPILER__graph_ /c
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Node.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Node.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Node.cc.o.d
@@ -366,8 +329,6 @@ build lib/CMakeFiles/graph.dir/Node.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Do
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Edge.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Edge.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Edge.cc.o.d
@@ -375,8 +336,6 @@ build lib/CMakeFiles/graph.dir/Edge.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Do
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Graph.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Graph.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Graph.cc.o.d
@@ -384,8 +343,6 @@ build lib/CMakeFiles/graph.dir/Graph.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/D
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/HApproxSMFQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.o.d
@@ -393,8 +350,6 @@ build lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.o: CXX_COMPILER__graph_ /c/Users/C
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 build lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o: CXX_COMPILER__graph_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/Convert_HR_to_HR2LQ.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o.d
@@ -402,8 +357,6 @@ build lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o: CXX_COMPILER__graph_ /c
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   OBJECT_FILE_DIR = lib/CMakeFiles/graph.dir
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
-  TARGET_PDB = lib/libgraph.pdb
 
 
 # =============================================================================
@@ -413,13 +366,12 @@ build lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o: CXX_COMPILER__graph_ /c
 #############################################
 # Link the static library lib/libgraph.a
 
-build lib/libgraph.a: CXX_STATIC_LIBRARY_LINKER__graph_ lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.o lib/CMakeFiles/graph.dir/NProposingMatching.cc.o lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.o lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.o lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.o lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.o lib/CMakeFiles/graph.dir/BipartiteGraph.cc.o lib/CMakeFiles/graph.dir/Partner.cc.o lib/CMakeFiles/graph.dir/PartnerList.cc.o lib/CMakeFiles/graph.dir/PreferenceList.cc.o lib/CMakeFiles/graph.dir/Vertex.cc.o lib/CMakeFiles/graph.dir/GraphReader.cc.o lib/CMakeFiles/graph.dir/Utils.cc.o lib/CMakeFiles/graph.dir/RelaxedStable.cc.o lib/CMakeFiles/graph.dir/Statistics.cc.o lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.o lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.o lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.o lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.o lib/CMakeFiles/graph.dir/Node.cc.o lib/CMakeFiles/graph.dir/Edge.cc.o lib/CMakeFiles/graph.dir/Graph.cc.o lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.o lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o
+build lib/libgraph.a: CXX_STATIC_LIBRARY_LINKER__graph_ lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.o lib/CMakeFiles/graph.dir/NProposingMatching.cc.o lib/CMakeFiles/graph.dir/StableMarriage.cc.o lib/CMakeFiles/graph.dir/YokoiEnvyfreeHRLQ.cc.o lib/CMakeFiles/graph.dir/MaximalEnvyfreeHRLQ.cc.o lib/CMakeFiles/graph.dir/HHeuristicHRLQ.cc.o lib/CMakeFiles/graph.dir/RHeuristicHRLQ.cc.o lib/CMakeFiles/graph.dir/BipartiteGraph.cc.o lib/CMakeFiles/graph.dir/Partner.cc.o lib/CMakeFiles/graph.dir/PartnerList.cc.o lib/CMakeFiles/graph.dir/PreferenceList.cc.o lib/CMakeFiles/graph.dir/Vertex.cc.o lib/CMakeFiles/graph.dir/GraphReader.cc.o lib/CMakeFiles/graph.dir/Utils.cc.o lib/CMakeFiles/graph.dir/RelaxedStable.cc.o lib/CMakeFiles/graph.dir/Statistics.cc.o lib/CMakeFiles/graph.dir/SEAPopularHRLQ.cc.o lib/CMakeFiles/graph.dir/LpApproxSMFQ.cc.o lib/CMakeFiles/graph.dir/Exact_Exponential_SMFQ.cc.o lib/CMakeFiles/graph.dir/DirectApproachHR2LQ.cc.o lib/CMakeFiles/graph.dir/Node.cc.o lib/CMakeFiles/graph.dir/Edge.cc.o lib/CMakeFiles/graph.dir/Graph.cc.o lib/CMakeFiles/graph.dir/HApproxSMFQ.cc.o lib/CMakeFiles/graph.dir/Convert_HR_to_HR2LQ.cc.o
   OBJECT_DIR = lib/CMakeFiles/graph.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = lib/CMakeFiles/graph.dir/graph.pdb
   TARGET_FILE = lib/libgraph.a
-  TARGET_PDB = lib/libgraph.pdb
+  TARGET_PDB = graph.a.dbg
 
 
 #############################################
@@ -507,8 +459,6 @@ build test/CMakeFiles/testrunner.dir/TestDefs.cc.o: CXX_COMPILER__testrunner_ /c
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestRunner.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestRunner.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestRunner.cc.o.d
@@ -516,8 +466,6 @@ build test/CMakeFiles/testrunner.dir/TestRunner.cc.o: CXX_COMPILER__testrunner_ 
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestPreferenceList.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.o.d
@@ -525,8 +473,6 @@ build test/CMakeFiles/testrunner.dir/TestPreferenceList.cc.o: CXX_COMPILER__test
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestPartnerList.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestPartnerList.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestPartnerList.cc.o.d
@@ -534,8 +480,6 @@ build test/CMakeFiles/testrunner.dir/TestPartnerList.cc.o: CXX_COMPILER__testrun
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestUtils.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestUtils.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestUtils.cc.o.d
@@ -543,8 +487,6 @@ build test/CMakeFiles/testrunner.dir/TestUtils.cc.o: CXX_COMPILER__testrunner_ /
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestStableMarriage.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.o.d
@@ -552,8 +494,6 @@ build test/CMakeFiles/testrunner.dir/TestStableMarriage.cc.o: CXX_COMPILER__test
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestPopular.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestPopular.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestPopular.cc.o.d
@@ -561,8 +501,6 @@ build test/CMakeFiles/testrunner.dir/TestPopular.cc.o: CXX_COMPILER__testrunner_
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestHR.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestHR.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestHR.cc.o.d
@@ -570,8 +508,6 @@ build test/CMakeFiles/testrunner.dir/TestHR.cc.o: CXX_COMPILER__testrunner_ /c/U
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestYokoi.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestYokoi.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestYokoi.cc.o.d
@@ -579,8 +515,6 @@ build test/CMakeFiles/testrunner.dir/TestYokoi.cc.o: CXX_COMPILER__testrunner_ /
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestMaximalEnvyfreeHRLQ.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.o.d
@@ -588,8 +522,6 @@ build test/CMakeFiles/testrunner.dir/TestMaximalEnvyfreeHRLQ.cc.o: CXX_COMPILER_
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 build test/CMakeFiles/testrunner.dir/TestParser.cc.o: CXX_COMPILER__testrunner_ /c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/TestParser.cc || cmake_object_order_depends_target_testrunner
   DEP_FILE = test/CMakeFiles/testrunner.dir/TestParser.cc.o.d
@@ -597,8 +529,6 @@ build test/CMakeFiles/testrunner.dir/TestParser.cc.o: CXX_COMPILER__testrunner_ 
   INCLUDES = -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/include -I/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/test/include
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   OBJECT_FILE_DIR = test/CMakeFiles/testrunner.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
-  TARGET_PDB = test/testrunner.pdb
 
 
 # =============================================================================
@@ -614,10 +544,9 @@ build test/testrunner.exe: CXX_EXECUTABLE_LINKER__testrunner_ test/CMakeFiles/te
   OBJECT_DIR = test/CMakeFiles/testrunner.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = test/CMakeFiles/testrunner.dir/
   TARGET_FILE = test/testrunner.exe
   TARGET_IMPLIB = test/libtestrunner.dll.a
-  TARGET_PDB = test/testrunner.pdb
+  TARGET_PDB = testrunner.exe.dbg
 
 
 #############################################
@@ -736,14 +665,14 @@ build test/all: phony test/testrunner.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt /usr/share/cmake-3.22.1/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.22.1/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22.1/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22.1/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineRCCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22.1/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22.1/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22.1/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22.1/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22.1/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22.1/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22.1/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22.1/Modules/CMakeRCCompiler.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeRCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestRCCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22.1/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-Determine-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-Determine-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS.cmake /usr/share/cmake-3.22.1/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt /usr/share/cmake-3.22.1/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22.1/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22.1/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22.1/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeRCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS.cmake /usr/share/cmake-3.22.1/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt /usr/share/cmake-3.22.1/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.22.1/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22.1/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22.1/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineRCCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22.1/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22.1/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22.1/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22.1/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22.1/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22.1/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22.1/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22.1/Modules/CMakeRCCompiler.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeRCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22.1/Modules/CMakeTestRCCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22.1/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22.1/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-Determine-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-Determine-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS.cmake /usr/share/cmake-3.22.1/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../lib/CMakeLists.txt ../test/CMakeLists.txt /usr/share/cmake-3.22.1/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22.1/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22.1/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22.1/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeRCInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22.1/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-GNU.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/CYGWIN.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-C.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-GNU-CXX.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS-windres.cmake /usr/share/cmake-3.22.1/Modules/Platform/MSYS.cmake /usr/share/cmake-3.22.1/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

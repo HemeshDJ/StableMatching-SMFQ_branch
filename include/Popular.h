@@ -21,10 +21,10 @@ public:
         return npm.compute_matching();
     }
 
-    std::pair<int,int> checker(std::shared_ptr<BipartiteGraph> G, 
-        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing) {
+    void checker(std::shared_ptr<BipartiteGraph> G, 
+        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream &out) {
         // NProposingMatching npm (get_graph(), is_A_proposing(), 1);
-        return npm.checker(G, M, A_proposing);
+        return npm.checker(G, M, A_proposing, out);
     }
 
 };
@@ -44,9 +44,9 @@ public:
         return npm.compute_matching();
     }
 
-    std::pair<int,int> checker(std::shared_ptr<BipartiteGraph> G, 
-        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing) 
-    { return {-1,-1}; }
+    void checker(std::shared_ptr<BipartiteGraph> G, 
+        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream &out) 
+    {}
 };
 
 #endif
