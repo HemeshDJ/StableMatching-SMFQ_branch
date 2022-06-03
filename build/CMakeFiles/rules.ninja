@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: graphmatching
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__graphmatching_
+rule CXX_COMPILER__graphmatching_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__graphmatching_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__graphmatching_
+rule CXX_EXECUTABLE_LINKER__graphmatching_Debug
   command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -33,7 +33,7 @@ rule CXX_EXECUTABLE_LINKER__graphmatching_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__tester_
+rule CXX_COMPILER__tester_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -43,7 +43,7 @@ rule CXX_COMPILER__tester_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__tester_
+rule CXX_EXECUTABLE_LINKER__tester_Debug
   command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -60,7 +60,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__graph_
+rule CXX_COMPILER__graph_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -70,7 +70,7 @@ rule CXX_COMPILER__graph_
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__graph_
+rule CXX_STATIC_LIBRARY_LINKER__graph_Debug
   command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\cmake.exe" -E rm -f $TARGET_FILE && "D:\Program Files\MSYS2\mingw64\bin\llvm-ar.exe" qc $TARGET_FILE $LINK_FLAGS $in && "D:\Program Files\MSYS2\mingw64\bin\llvm-ranlib.exe" $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -79,7 +79,7 @@ rule CXX_STATIC_LIBRARY_LINKER__graph_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__testrunner_
+rule CXX_COMPILER__testrunner_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -89,7 +89,7 @@ rule CXX_COMPILER__testrunner_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__testrunner_
+rule CXX_EXECUTABLE_LINKER__testrunner_Debug
   command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT

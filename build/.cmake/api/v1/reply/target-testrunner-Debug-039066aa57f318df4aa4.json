@@ -62,7 +62,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "  -Wall -O0 -g"
+					"fragment" : "-g   -Wall -O0 -g"
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -116,6 +116,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "",
 				"role" : "flags"

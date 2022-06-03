@@ -12,7 +12,7 @@
 						2
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-ff79d1b467cf99f32a2b.json",
+					"jsonFile" : "directory-.-Debug-ff79d1b467cf99f32a2b.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -27,7 +27,7 @@
 				},
 				{
 					"build" : "lib",
-					"jsonFile" : "directory-lib-e9069484d90298468a11.json",
+					"jsonFile" : "directory-lib-Debug-e9069484d90298468a11.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -42,7 +42,7 @@
 				},
 				{
 					"build" : "test",
-					"jsonFile" : "directory-test-f18be1977b403cfd1a50.json",
+					"jsonFile" : "directory-test-Debug-f18be1977b403cfd1a50.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -56,7 +56,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -81,28 +81,28 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "graph::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-graph-f624362b06f876de45c2.json",
+					"jsonFile" : "target-graph-Debug-b813e98f31e822629495.json",
 					"name" : "graph",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "graphmatching::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-graphmatching-6044fd73aa9f83f13b3b.json",
+					"jsonFile" : "target-graphmatching-Debug-c0c1736abe2bd1ab4903.json",
 					"name" : "graphmatching",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "tester::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tester-ab4bbfb19be78b4a8c36.json",
+					"jsonFile" : "target-tester-Debug-94e6e0e0f70118930eb1.json",
 					"name" : "tester",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "testrunner::@36f028580bb02cc8272a",
-					"jsonFile" : "target-testrunner-379dbad953ac5e9f5c5a.json",
+					"jsonFile" : "target-testrunner-Debug-039066aa57f318df4aa4.json",
 					"name" : "testrunner",
 					"projectIndex" : 0
 				}
