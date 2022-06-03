@@ -1,7 +1,0 @@
-a106 b240
-a148 b110
-a17 b110
-a196 b110
-a50 b240
-Edges are not covered
-popularity sum is less than zero

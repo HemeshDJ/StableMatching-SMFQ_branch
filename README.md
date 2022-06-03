@@ -32,10 +32,18 @@ The executable takes a set of parameters to compute the desired matching:
 	-l -- compute matching using LP algorithm for SMFQ instances
 	-z -- compute popular matching for HRLQ instance using SEA paper algorithm
 
+To run the code in test mode:
+
+	-t -- test mode
+
 To provide an input graph, and the output matching filename:
 
 	-i -- /path/to/graphfile
 	-o -- /path/to/store/the/matching
+
+To print output matching in signature format:
+
+	-g -- print output in signature format
 
 Also, for the -s, -p, and -m parameters, you could specify the resident/hospital
 proposing algorithm (by default it runs the resident proposing algorithm).

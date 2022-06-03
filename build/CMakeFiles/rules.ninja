@@ -17,7 +17,7 @@
 rule CXX_COMPILER__graphmatching_
   depfile = $DEP_FILE
   deps = gcc
-  command = /usr/bin/c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -25,7 +25,7 @@ rule CXX_COMPILER__graphmatching_
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__graphmatching_
-  command = $PRE_LINK && /usr/bin/c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -36,7 +36,7 @@ rule CXX_EXECUTABLE_LINKER__graphmatching_
 rule CXX_COMPILER__tester_
   depfile = $DEP_FILE
   deps = gcc
-  command = /usr/bin/c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -44,7 +44,7 @@ rule CXX_COMPILER__tester_
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__tester_
-  command = $PRE_LINK && /usr/bin/c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -63,7 +63,7 @@ rule CUSTOM_COMMAND
 rule CXX_COMPILER__graph_
   depfile = $DEP_FILE
   deps = gcc
-  command = /usr/bin/c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -71,7 +71,7 @@ rule CXX_COMPILER__graph_
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__graph_
-  command = $PRE_LINK && /usr/bin/cmake.exe -E rm -f $TARGET_FILE && /usr/bin/ar.exe qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib.exe $TARGET_FILE && $POST_BUILD
+  command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\cmake.exe" -E rm -f $TARGET_FILE && "D:\Program Files\MSYS2\mingw64\bin\llvm-ar.exe" qc $TARGET_FILE $LINK_FLAGS $in && "D:\Program Files\MSYS2\mingw64\bin\llvm-ranlib.exe" $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -82,7 +82,7 @@ rule CXX_STATIC_LIBRARY_LINKER__graph_
 rule CXX_COMPILER__testrunner_
   depfile = $DEP_FILE
   deps = gcc
-  command = /usr/bin/c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -90,7 +90,7 @@ rule CXX_COMPILER__testrunner_
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__testrunner_
-  command = $PRE_LINK && /usr/bin/c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  command = cmd.exe /C "$PRE_LINK && "D:\Program Files\MSYS2\mingw64\bin\clang++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -99,7 +99,7 @@ rule CXX_EXECUTABLE_LINKER__testrunner_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake.exe --regenerate-during-build -S/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1 -B/c/Users/CAd_C/Documents/StableMatching-SMFQ_branch-1/build
+  command = "D:\Program Files\MSYS2\mingw64\bin\cmake.exe" --regenerate-during-build -SD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch -BD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build
   description = Re-running CMake...
   generator = 1
 
@@ -108,7 +108,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /usr/bin/ninja.exe $FILE_ARG -t clean $TARGETS
+  command = "D:\Program Files\MSYS2\mingw64\bin\ninja.exe" $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -116,6 +116,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /usr/bin/ninja.exe -t targets
+  command = "D:\Program Files\MSYS2\mingw64\bin\ninja.exe" -t targets
   description = All primary targets available:
 
