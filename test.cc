@@ -47,7 +47,7 @@ void compute_matching(bool A_proposing, const char* input_file) {
     //s.get_statistics(G, M);
     //s.get_smfq_statistics(G, M);
 
-    std::pair<int,int> flags = alg.check_popularity(G, M, A_proposing, std::cout);
+    std::pair<int,int> flags = alg.checker(G, M, A_proposing);
     if(!flags.first)
         stmp << "Edges not covered. ";
     if(flags.second)

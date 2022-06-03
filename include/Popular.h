@@ -21,10 +21,10 @@ public:
         return npm.compute_matching();
     }
 
-    std::pair<int,int> check_popularity(std::shared_ptr<BipartiteGraph> G, 
-        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out) {
+    std::pair<int,int> checker(std::shared_ptr<BipartiteGraph> G, 
+        std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing) {
         // NProposingMatching npm (get_graph(), is_A_proposing(), 1);
-        return npm.check_popularity(G, M, A_proposing, out);
+        return npm.checker(G, M, A_proposing);
     }
 
 };
