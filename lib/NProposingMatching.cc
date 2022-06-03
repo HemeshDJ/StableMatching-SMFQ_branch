@@ -141,7 +141,7 @@ std::pair<int,int> NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G
     }
 
     // assigning popularity to each vertex
-    std::map<VertexPtr, int> popularity;    
+    std::map<VertexPtr, int> dual_value;    
 
     for (const auto& it : proposing_partition) {
         auto u = it.second;
@@ -152,49 +152,38 @@ std::pair<int,int> NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G
 
             for (const auto& i : partners) {
                 auto v = i.vertex;
-                popularity[u] = (levels[u] ? -1 : 1);
-                popularity[v] += (levels[u] ? 1 : -1);
+                dual_value[u] = (levels[u] ? -1 : 1);
+                dual_value[v] += (levels[u] ? 1 : -1);
             }
 
             if(partners.size() == 0) {
-                popularity[u] = 0;
+                dual_value[u] = 0;
             }
         }
         else {
-            popularity[u] = 0;
+            dual_value[u] = 0;
         }
     }                                      
 
     // checking if each edge is covered
     int flag = 1;
-    // for( auto & it : G->get_A_partition() ) {
-    //     auto u = it.second;
+    for( auto & it : G->get_A_partition() ) {
+        auto u = it.second;
 
-    //     for( auto& it2 : u->get_preference_list() ) {
-    //         auto v = it2.vertex;
+        for( auto& it2 : u->get_preference_list() ) {
+            auto v = it2.vertex;
 
-    //         if(popularity[u] + popularity[v] < edge_weights[v][u]+edge_weights[u][v]) {
-    //             flag = 0;
-    //             stmp << u->get_id() << " " << v->get_id() << "\n";
-    //         }
-    //     }
-    // }
-    // for ( auto & v : VertexSet) {
-    //     if(popularity[v] < edge_weights[v][v]) {
-    //         flag = 0;
-    //         stmp << v->get_id() << "\n";
-    //     }
-    // }
-    // if(flag) {
-    //     stmp << "Edges are covered" << "\n";
-    // }
-    // else {
-    //     stmp << "Edges are not covered" << "\n";
-    // }
+            if(dual_value[u] + dual_value[v] < edge_weights[v][u]+edge_weights[u][v]) {
+                flag = 0;
+                // stmp << u->get_id() << " " << v->get_id() << "\n";
+            }
+        }
+    }
 
-    // checking if total sum of popularity is 0
+
+    // checking if total sum of dual_value is 0
     int pop_sum = 0;
-    for(auto it : popularity) {
+    for(auto it : dual_value) {
         pop_sum += it.second;
     }
     return {flag, pop_sum};
