@@ -180,7 +180,7 @@ void print_signature(std::shared_ptr<BipartiteGraph> G,
     stmp << "Signature" << "\n";
     stmp << "|A| = " << (G->get_A_partition()).size() << "\n";
     stmp << "|B| = " << (G->get_B_partition()).size() << "\n";
-    stmp << "Max Pref Size of A = " << num_ranks << "\n";
+    stmp << "Max Pref Size of A = " << num_ranks-1 << "\n";
     for(int i = 1; i < num_ranks; i++) {
         stmp << i << " " << ranks[i] << "\n";
     }
