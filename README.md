@@ -18,6 +18,8 @@ This should build executables named *graphmatching* and *tester* inside the buil
 
 
 ## Usage
+
+### Computing
 The *grapthmatching* executable takes a set of parameters to compute the desired matching:
 
 	-s -- compute a stable matching
@@ -55,6 +57,7 @@ For e.g., to compute a stable matching with the hospitals proposing (assuming in
 
 	$ ./graphmatching -B -s -i ../resources/hrlq_m6.txt -o ../resources/hrlq_m6_stable.txt
 
+### Testing
 The *tester* executable takes a set of parameters to compute the desired matching:
 
 	-s -- test the stable matching algorithm
