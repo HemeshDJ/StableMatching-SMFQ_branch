@@ -1,16 +1,16 @@
 #include "BipartiteGraph.h"
 #include "StableMarriage.h"
-#include "Convert_HR_to_HR2LQ.h"
-#include "SEAPopularHRLQ.h"
-#include "LpApproxSMFQ.h"
-#include "Exact_Exponential_SMFQ.h"
-#include "DirectApproachHR2LQ.h"
+// #include "Convert_HR_to_HR2LQ.h"
+// #include "SEAPopularHRLQ.h"
+// #include "LpApproxSMFQ.h"
+// #include "Exact_Exponential_SMFQ.h"
+// #include "DirectApproachHR2LQ.h"
 #include "Statistics.h"
 #include "Popular.h"
-#include "RHeuristicHRLQ.h"
-#include "HHeuristicHRLQ.h"
-#include "YokoiEnvyfreeHRLQ.h"
-#include "MaximalEnvyfreeHRLQ.h"
+// #include "RHeuristicHRLQ.h"
+// #include "HHeuristicHRLQ.h"
+// #include "YokoiEnvyfreeHRLQ.h"
+// #include "MaximalEnvyfreeHRLQ.h"
 #include "Utils.h"
 #include "GraphReader.h"
 #include <fstream>
@@ -68,18 +68,18 @@ void compute_matching(bool A_proposing, bool signature, bool test, const char* i
 
 int main(int argc, char* argv[]) {
     int c = 0;
-    bool compute_sea_popular = false;
-    bool compute_direct_sm2lq = false;
-    bool compute_lp_smfq = false;
-    bool compute_exact_exp_smfq = false;
+    // bool compute_sea_popular = false;
+    // bool compute_direct_sm2lq = false;
+    // bool compute_lp_smfq = false;
+    // bool compute_exact_exp_smfq = false;
     bool compute_stable = false;
     bool compute_popular = false;
-    bool compute_max_card = false;
-    bool compute_rhrlq = false;
-    bool compute_hhrlq = false;
-    bool compute_yhrlq = false;
-    bool compute_ehrlq = false;
-    bool convert_hr_to_hr2lq = false;
+    // bool compute_max_card = false;
+    // bool compute_rhrlq = false;
+    // bool compute_hhrlq = false;
+    // bool compute_yhrlq = false;
+    // bool compute_ehrlq = false;
+    // bool convert_hr_to_hr2lq = false;
     bool signature = false;
     bool test = false;
     bool A_proposing = true;
@@ -99,18 +99,18 @@ int main(int argc, char* argv[]) {
         switch (c) {
             case 'A': A_proposing = true; break;
             case 'B': A_proposing = false; break; 
-            case 'c': convert_hr_to_hr2lq = true; break;
-            case 'd': compute_direct_sm2lq = true; break;
-            case 'k': compute_exact_exp_smfq = true; break;
-            case 'l': compute_lp_smfq = true; break;
-            case 'z': compute_sea_popular = true; break;
+            // case 'c': convert_hr_to_hr2lq = true; break;
+            // case 'd': compute_direct_sm2lq = true; break;
+            // case 'k': compute_exact_exp_smfq = true; break;
+            // case 'l': compute_lp_smfq = true; break;
+            // case 'z': compute_sea_popular = true; break;
             case 's': compute_stable = true; break;
             case 'p': compute_popular = true; break;
-            case 'm': compute_max_card = true; break;
-            case 'r': compute_rhrlq = true; break;
-            case 'h': compute_hhrlq = true; break;
-            case 'y': compute_yhrlq = true; break;
-            case 'e': compute_ehrlq = true; break;
+            // case 'm': compute_max_card = true; break;
+            // case 'r': compute_rhrlq = true; break;
+            // case 'h': compute_hhrlq = true; break;
+            // case 'y': compute_yhrlq = true; break;
+            // case 'e': compute_ehrlq = true; break;
             case 'g': signature = true; break;
             case 't': test = true; break;
             case 'i': input_file = optarg; break;
@@ -129,28 +129,28 @@ int main(int argc, char* argv[]) {
     }
     if (compute_stable) {
         compute_matching<StableMarriage>(A_proposing, signature, test, input_file, output_file);
-    }else if (convert_hr_to_hr2lq) {
-        compute_matching<Convert_HR_to_HR2LQ>(A_proposing, signature, test, input_file, output_file);
-    }else if (compute_direct_sm2lq) {
-        compute_matching<DirectApproachHR2LQ>(A_proposing, signature, test, input_file, output_file);
-    }else if (compute_exact_exp_smfq) {
-        compute_matching<Exact_Exponential_SMFQ>(A_proposing, signature, test, input_file, output_file);
-    }else if (compute_lp_smfq) {
-        compute_matching<LpApproxSMFQ>(A_proposing, signature, test, input_file, output_file);
-    }else if (compute_sea_popular) {
-        compute_matching<SEAPopularHRLQ>(A_proposing, signature, test, input_file, output_file);
+    // }else if (convert_hr_to_hr2lq) {
+    //     compute_matching<Convert_HR_to_HR2LQ>(A_proposing, signature, test, input_file, output_file);
+    // }else if (compute_direct_sm2lq) {
+    //     compute_matching<DirectApproachHR2LQ>(A_proposing, signature, test, input_file, output_file);
+    // }else if (compute_exact_exp_smfq) {
+    //     compute_matching<Exact_Exponential_SMFQ>(A_proposing, signature, test, input_file, output_file);
+    // }else if (compute_lp_smfq) {
+    //     compute_matching<LpApproxSMFQ>(A_proposing, signature, test, input_file, output_file);
+    // }else if (compute_sea_popular) {
+    //     compute_matching<SEAPopularHRLQ>(A_proposing, signature, test, input_file, output_file);
     }else if (compute_popular) {
         compute_matching<MaxCardPopular>(A_proposing, signature, test, input_file, output_file);
-    } else if (compute_max_card) {
-        compute_matching<PopularAmongMaxCard>(A_proposing, signature, test, input_file, output_file);
-    } else if (compute_rhrlq) {
-        compute_matching<RHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
-    } else if (compute_hhrlq) {
-        compute_matching<HHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
-    } else if (compute_yhrlq) {
-        compute_matching<YokoiEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
-    } else if (compute_ehrlq) {
-        compute_matching<MaximalEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
+    // } else if (compute_max_card) {
+    //     compute_matching<PopularAmongMaxCard>(A_proposing, signature, test, input_file, output_file);
+    // } else if (compute_rhrlq) {
+    //     compute_matching<RHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
+    // } else if (compute_hhrlq) {
+    //     compute_matching<HHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
+    // } else if (compute_yhrlq) {
+    //     compute_matching<YokoiEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
+    // } else if (compute_ehrlq) {
+    //     compute_matching<MaximalEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
     }
 
     return 0;

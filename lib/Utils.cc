@@ -151,9 +151,14 @@ void print_signature(std::shared_ptr<BipartiteGraph> G,
     std::stringstream stmp;
 
     int unmatched = (G->get_A_partition()).size();
-    // Changed every "G->get_A_partition().size()" into "num_ranks"
-    int num_ranks = (G->get_A_partition()).size()+2;
-    // For some reason using arr[n] = {0}; didnt work for initialization
+    int num_ranks = 1;
+
+    for (const auto& it : G->get_A_partition()) {
+        auto u = it.second;
+        if(num_ranks < u->get_preference_list().size()+1) 
+            num_ranks = u->get_preference_list().size()+1;
+    }
+
     int ranks[num_ranks];
     for(int i = 0; i < num_ranks; i++) {
         ranks[i] = 0;
@@ -172,14 +177,16 @@ void print_signature(std::shared_ptr<BipartiteGraph> G,
             }
         }
     }
-    ranks[num_ranks-1] = unmatched;
     stmp << "Signature" << "\n";
-    for(int i = 1; i < num_ranks-1; i++) { // Changed "G->get_B_partition().size()" -> "num_ranks-1"
+    stmp << "|A| = " << (G->get_A_partition()).size() << "\n";
+    stmp << "|B| = " << (G->get_B_partition()).size() << "\n";
+    stmp << "Max Pref Size of A = " << num_ranks << "\n";
+    for(int i = 1; i < num_ranks; i++) {
         stmp << i << " " << ranks[i] << "\n";
     }
     
     // Instead of last rank
-    stmp << "Unassigned " << ranks[num_ranks-1] << "\n";
+    stmp << "Unassigned " << unmatched << "\n";
 
     out << stmp.str();
 }   
