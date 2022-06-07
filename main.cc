@@ -18,7 +18,7 @@
 #include <unistd.h>
 
 template<typename T>
-void compute_matching(bool A_proposing, bool signature, bool test, const char* input_file, const char* output_file) {
+void compute_matching(bool A_proposing, bool test, const char* input_file, const char* output_file, const char* sig_file = nullptr) {
     // setup input/output stream as std::cin/std::cout by default
     // if a file is specified use it to read/write
 
@@ -54,16 +54,21 @@ void compute_matching(bool A_proposing, bool signature, bool test, const char* i
         alg.checker(G, M, A_proposing, std::cerr);
     }
 
-    if(signature) {
-        print_signature(G, M, std::cout);
-    }
-    else {
-        print_matching(G, M, std::cout);
-    }
+    print_matching(G, M, std::cout);
 
     // restore buffers
     std::cin.rdbuf(cin_buf);
     std::cout.rdbuf(cout_buf);
+    filein.close();
+    fileout.close();
+
+    if(sig_file) {
+        fileout.open(sig_file);
+        std::cout.rdbuf(fileout.rdbuf());
+        print_signature(G, M, std::cout);
+        std::cout.rdbuf(cout_buf);
+        fileout.close();
+    }
 }
 
 int main(int argc, char* argv[]) {
@@ -80,11 +85,11 @@ int main(int argc, char* argv[]) {
     // bool compute_yhrlq = false;
     // bool compute_ehrlq = false;
     // bool convert_hr_to_hr2lq = false;
-    bool signature = false;
     bool test = false;
     bool A_proposing = true;
     const char* input_file = nullptr;
     const char* output_file = nullptr;
+    const char* sig_file = nullptr;
 
     opterr = 0;
     // choose the proposing partition using -A and -B
@@ -95,24 +100,24 @@ int main(int argc, char* argv[]) {
     // -t computes in test mode
     // -i is the path to the input graph, -o is the path where the matching
     // computed should be stored
-    while ((c = getopt(argc, argv, "ABczdklspmrhyegti:o:")) != -1) {
+    while ((c = getopt(argc, argv, "ABsptg:i:o:")) != -1) {
         switch (c) {
             case 'A': A_proposing = true; break;
             case 'B': A_proposing = false; break; 
+            case 's': compute_stable = true; break;
+            case 'p': compute_popular = true; break;
+            case 't': test = true; break;
             // case 'c': convert_hr_to_hr2lq = true; break;
             // case 'd': compute_direct_sm2lq = true; break;
             // case 'k': compute_exact_exp_smfq = true; break;
             // case 'l': compute_lp_smfq = true; break;
             // case 'z': compute_sea_popular = true; break;
-            case 's': compute_stable = true; break;
-            case 'p': compute_popular = true; break;
             // case 'm': compute_max_card = true; break;
             // case 'r': compute_rhrlq = true; break;
             // case 'h': compute_hhrlq = true; break;
             // case 'y': compute_yhrlq = true; break;
             // case 'e': compute_ehrlq = true; break;
-            case 'g': signature = true; break;
-            case 't': test = true; break;
+            case 'g': sig_file = optarg; break;
             case 'i': input_file = optarg; break;
             case 'o': output_file = optarg; break;
             case '?':
@@ -120,6 +125,8 @@ int main(int argc, char* argv[]) {
                     std::cerr << "Option -i requires an argument.\n";
                 } else if (optopt == 'o') {
                     std::cerr << "Option -o requires an argument.\n";
+                } else if (optopt == 'g') {
+                    std::cerr << "Option -g requires an argument.\n";
                 } else {
                     std::cerr << "Unknown option: " << static_cast<char>(optopt) << '\n';
                 }
@@ -127,30 +134,41 @@ int main(int argc, char* argv[]) {
             default: break;
         }
     }
+
+    if(!input_file) {
+        std::cerr << "Add -i <input_file_name> to specify input file.\n";
+    }
+    if(!output_file && !sig_file) {     //neither signature nor output file is specified
+        std::cerr << "Add -o or -g (with arguments).\n";
+    }
+    
     if (compute_stable) {
-        compute_matching<StableMarriage>(A_proposing, signature, test, input_file, output_file);
+        compute_matching<StableMarriage>(A_proposing, test, input_file, output_file, sig_file);
     // }else if (convert_hr_to_hr2lq) {
-    //     compute_matching<Convert_HR_to_HR2LQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<Convert_HR_to_HR2LQ>(A_proposing, test, input_file, output_file);
     // }else if (compute_direct_sm2lq) {
-    //     compute_matching<DirectApproachHR2LQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<DirectApproachHR2LQ>(A_proposing, test, input_file, output_file);
     // }else if (compute_exact_exp_smfq) {
-    //     compute_matching<Exact_Exponential_SMFQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<Exact_Exponential_SMFQ>(A_proposing, test, input_file, output_file);
     // }else if (compute_lp_smfq) {
-    //     compute_matching<LpApproxSMFQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<LpApproxSMFQ>(A_proposing, test, input_file, output_file);
     // }else if (compute_sea_popular) {
-    //     compute_matching<SEAPopularHRLQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<SEAPopularHRLQ>(A_proposing, test, input_file, output_file);
     }else if (compute_popular) {
-        compute_matching<MaxCardPopular>(A_proposing, signature, test, input_file, output_file);
+        compute_matching<MaxCardPopular>(A_proposing, test, input_file, output_file, sig_file);
     // } else if (compute_max_card) {
-    //     compute_matching<PopularAmongMaxCard>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<PopularAmongMaxCard>(A_proposing, test, input_file, output_file);
     // } else if (compute_rhrlq) {
-    //     compute_matching<RHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<RHeuristicHRLQ>(A_proposing, test, input_file, output_file);
     // } else if (compute_hhrlq) {
-    //     compute_matching<HHeuristicHRLQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<HHeuristicHRLQ>(A_proposing, test, input_file, output_file);
     // } else if (compute_yhrlq) {
-    //     compute_matching<YokoiEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<YokoiEnvyfreeHRLQ>(A_proposing, test, input_file, output_file);
     // } else if (compute_ehrlq) {
-    //     compute_matching<MaximalEnvyfreeHRLQ>(A_proposing, signature, test, input_file, output_file);
+    //     compute_matching<MaximalEnvyfreeHRLQ>(A_proposing, test, input_file, output_file);
+    }
+    else {
+        std::cerr << "Add -s to compute stable matching, -p for maximum cardinality popular matching. \n";
     }
 
     return 0;

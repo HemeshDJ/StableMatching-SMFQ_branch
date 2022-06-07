@@ -79,7 +79,13 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    // std::ofstream filelog(output_file);    
+    if(!output_file) {
+        std::cerr << "Add -o <output_file_name> to specify output file.\n";
+    }
+    if(!compute_stable && !compute_popular) {
+        std::cerr << "Add -s to compute stable matching, -p for maximum cardinality popular matching.\n";
+    }
+  
     for(int i=1; i<=4; i++)
     {
         char inp_file[] = "../testsuite/input/OneToOneX/TCY.txt";
