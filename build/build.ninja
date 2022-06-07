@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: graphmatching
-# Configurations: Debug
+# Configurations: 
 # =============================================================================
 
 #############################################
@@ -20,11 +20,6 @@
 
 ninja_required_version = 1.5
 
-
-#############################################
-# Set configuration variable for custom commands.
-
-CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,7 +34,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build/
+cmake_ninja_workdir = C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/build/
 # =============================================================================
 # Object build statements for EXECUTABLE target graphmatching
 
@@ -49,12 +44,14 @@ cmake_ninja_workdir = D$:/IITM/Projects/StableMatchingProject/StableMatching-SMF
 
 build cmake_object_order_depends_target_graphmatching: phony || cmake_object_order_depends_target_graph
 
-build CMakeFiles/graphmatching.dir/main.cc.obj: CXX_COMPILER__graphmatching_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/main.cc || cmake_object_order_depends_target_graphmatching
+build CMakeFiles/graphmatching.dir/main.cc.obj: CXX_COMPILER__graphmatching_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/main.cc || cmake_object_order_depends_target_graphmatching
   DEP_FILE = CMakeFiles\graphmatching.dir\main.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include
   OBJECT_DIR = CMakeFiles\graphmatching.dir
   OBJECT_FILE_DIR = CMakeFiles\graphmatching.dir
+  TARGET_COMPILE_PDB = CMakeFiles\graphmatching.dir\
+  TARGET_PDB = graphmatching.pdb
 
 
 # =============================================================================
@@ -64,15 +61,15 @@ build CMakeFiles/graphmatching.dir/main.cc.obj: CXX_COMPILER__graphmatching_Debu
 #############################################
 # Link the executable graphmatching.exe
 
-build graphmatching.exe: CXX_EXECUTABLE_LINKER__graphmatching_Debug CMakeFiles/graphmatching.dir/main.cc.obj | lib/libgraph.a || lib/libgraph.a
-  FLAGS = -g
+build graphmatching.exe: CXX_EXECUTABLE_LINKER__graphmatching_ CMakeFiles/graphmatching.dir/main.cc.obj | lib/libgraph.a || lib/libgraph.a
   LINK_LIBRARIES = lib/libgraph.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\graphmatching.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\graphmatching.dir\
   TARGET_FILE = graphmatching.exe
   TARGET_IMPLIB = libgraphmatching.dll.a
-  TARGET_PDB = graphmatching.exe.dbg
+  TARGET_PDB = graphmatching.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target tester
@@ -83,12 +80,14 @@ build graphmatching.exe: CXX_EXECUTABLE_LINKER__graphmatching_Debug CMakeFiles/g
 
 build cmake_object_order_depends_target_tester: phony || cmake_object_order_depends_target_graph
 
-build CMakeFiles/tester.dir/test.cc.obj: CXX_COMPILER__tester_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/test.cc || cmake_object_order_depends_target_tester
+build CMakeFiles/tester.dir/test.cc.obj: CXX_COMPILER__tester_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/test.cc || cmake_object_order_depends_target_tester
   DEP_FILE = CMakeFiles\tester.dir\test.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include
   OBJECT_DIR = CMakeFiles\tester.dir
   OBJECT_FILE_DIR = CMakeFiles\tester.dir
+  TARGET_COMPILE_PDB = CMakeFiles\tester.dir\
+  TARGET_PDB = tester.pdb
 
 
 # =============================================================================
@@ -98,22 +97,22 @@ build CMakeFiles/tester.dir/test.cc.obj: CXX_COMPILER__tester_Debug D$:/IITM/Pro
 #############################################
 # Link the executable tester.exe
 
-build tester.exe: CXX_EXECUTABLE_LINKER__tester_Debug CMakeFiles/tester.dir/test.cc.obj | lib/libgraph.a || lib/libgraph.a
-  FLAGS = -g
+build tester.exe: CXX_EXECUTABLE_LINKER__tester_ CMakeFiles/tester.dir/test.cc.obj | lib/libgraph.a || lib/libgraph.a
   LINK_LIBRARIES = lib/libgraph.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tester.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\tester.dir\
   TARGET_FILE = tester.exe
   TARGET_IMPLIB = libtester.dll.a
-  TARGET_PDB = tester.exe.dbg
+  TARGET_PDB = tester.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build && "D:\Program Files\MSYS2\mingw64\bin\cmake-gui.exe" -SD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch -BD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build"
+  COMMAND = cmd.exe /C "cd /D C:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build && C:\msys64\mingw64\bin\cmake-gui.exe -SC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1 -BC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -125,7 +124,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build && "D:\Program Files\MSYS2\mingw64\bin\cmake.exe" --regenerate-during-build -SD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch -BD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build"
+  COMMAND = cmd.exe /C "cd /D C:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build && C:\msys64\mingw64\bin\cmake.exe --regenerate-during-build -SC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1 -BC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -134,7 +133,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/CMakeLists.txt
+# C:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -146,82 +145,104 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_graph: phony || lib/CMakeFiles/graph.dir
 
-build lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/MatchingAlgorithm.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/MatchingAlgorithm.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\MatchingAlgorithm.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/NProposingMatching.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/NProposingMatching.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\NProposingMatching.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/StableMarriage.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/StableMarriage.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/StableMarriage.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/StableMarriage.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\StableMarriage.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/BipartiteGraph.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/BipartiteGraph.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\BipartiteGraph.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/Partner.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Partner.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Partner.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/Partner.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Partner.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/PartnerList.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/PartnerList.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/PartnerList.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/PartnerList.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\PartnerList.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/PreferenceList.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/PreferenceList.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/PreferenceList.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/PreferenceList.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\PreferenceList.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/Vertex.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Vertex.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Vertex.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/Vertex.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Vertex.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/GraphReader.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/GraphReader.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/GraphReader.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/GraphReader.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\GraphReader.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/Utils.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Utils.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Utils.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/Utils.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Utils.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
-build lib/CMakeFiles/graph.dir/Statistics.cc.obj: CXX_COMPILER__graph_Debug D$:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/Statistics.cc || cmake_object_order_depends_target_graph
+build lib/CMakeFiles/graph.dir/Statistics.cc.obj: CXX_COMPILER__graph_ C$:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/Statistics.cc || cmake_object_order_depends_target_graph
   DEP_FILE = lib\CMakeFiles\graph.dir\Statistics.cc.obj.d
-  FLAGS = -g   -Wall -O0 -g -std=gnu++17
-  INCLUDES = -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/include -ID:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/lib/include
+  FLAGS = -Wall -O0 -g -std=gnu++17
+  INCLUDES = -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/include -IC:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/lib/include
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   OBJECT_FILE_DIR = lib\CMakeFiles\graph.dir
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
+  TARGET_PDB = lib\libgraph.pdb
 
 
 # =============================================================================
@@ -231,20 +252,20 @@ build lib/CMakeFiles/graph.dir/Statistics.cc.obj: CXX_COMPILER__graph_Debug D$:/
 #############################################
 # Link the static library lib\libgraph.a
 
-build lib/libgraph.a: CXX_STATIC_LIBRARY_LINKER__graph_Debug lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj lib/CMakeFiles/graph.dir/StableMarriage.cc.obj lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj lib/CMakeFiles/graph.dir/Partner.cc.obj lib/CMakeFiles/graph.dir/PartnerList.cc.obj lib/CMakeFiles/graph.dir/PreferenceList.cc.obj lib/CMakeFiles/graph.dir/Vertex.cc.obj lib/CMakeFiles/graph.dir/GraphReader.cc.obj lib/CMakeFiles/graph.dir/Utils.cc.obj lib/CMakeFiles/graph.dir/Statistics.cc.obj
-  LANGUAGE_COMPILE_FLAGS = -g
+build lib/libgraph.a: CXX_STATIC_LIBRARY_LINKER__graph_ lib/CMakeFiles/graph.dir/MatchingAlgorithm.cc.obj lib/CMakeFiles/graph.dir/NProposingMatching.cc.obj lib/CMakeFiles/graph.dir/StableMarriage.cc.obj lib/CMakeFiles/graph.dir/BipartiteGraph.cc.obj lib/CMakeFiles/graph.dir/Partner.cc.obj lib/CMakeFiles/graph.dir/PartnerList.cc.obj lib/CMakeFiles/graph.dir/PreferenceList.cc.obj lib/CMakeFiles/graph.dir/Vertex.cc.obj lib/CMakeFiles/graph.dir/GraphReader.cc.obj lib/CMakeFiles/graph.dir/Utils.cc.obj lib/CMakeFiles/graph.dir/Statistics.cc.obj
   OBJECT_DIR = lib\CMakeFiles\graph.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = lib\CMakeFiles\graph.dir\graph.pdb
   TARGET_FILE = lib\libgraph.a
-  TARGET_PDB = graph.a.dbg
+  TARGET_PDB = lib\libgraph.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build lib/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build\lib && "D:\Program Files\MSYS2\mingw64\bin\cmake-gui.exe" -SD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch -BD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build"
+  COMMAND = cmd.exe /C "cd /D C:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build\lib && C:\msys64\mingw64\bin\cmake-gui.exe -SC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1 -BC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -256,7 +277,7 @@ build lib/edit_cache: phony lib/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build lib/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build\lib && "D:\Program Files\MSYS2\mingw64\bin\cmake.exe" --regenerate-during-build -SD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch -BD:\IITM\Projects\StableMatchingProject\StableMatching-SMFQ_branch\build"
+  COMMAND = cmd.exe /C "cd /D C:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build\lib && C:\msys64\mingw64\bin\cmake.exe --regenerate-during-build -SC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1 -BC:\Users\kruth\OneDrive\Desktop\PC02\StableMatching-SMFQ_branch-1\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -280,14 +301,14 @@ build tester: phony tester.exe
 # =============================================================================
 
 #############################################
-# Folder: D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build
+# Folder: C:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/build
 
 build all: phony graphmatching.exe tester.exe lib/all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build/lib
+# Folder: C:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/build/lib
 
 build lib/all: phony lib/libgraph.a
 
@@ -303,14 +324,14 @@ build lib/all: phony lib/libgraph.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/CMakeLists.txt C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCCompilerABI.c C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineRCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeRCCompiler.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeSystem.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestRCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-Determine-CXX.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../lib/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-C.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/MSYS2/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../lib/CMakeLists.txt C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCCompilerABI.c C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineRCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeRCCompiler.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeRCInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeSystem.cmake.in C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/CMakeTestRCCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-C.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-Determine-CXX.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows-windres.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/Windows.cmake C$:/msys64/mingw64/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeRCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

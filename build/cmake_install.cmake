@@ -1,4 +1,4 @@
-# Install script for directory: D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch
+# Install script for directory: C:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/Program Files/MSYS2/mingw64/bin/llvm-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/CodeBlocks/MinGW/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build/lib/cmake_install.cmake")
+  include("C:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/build/lib/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/IITM/Projects/StableMatchingProject/StableMatching-SMFQ_branch/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/kruth/OneDrive/Desktop/PC02/StableMatching-SMFQ_branch-1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
