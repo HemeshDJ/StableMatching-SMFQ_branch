@@ -1,0 +1,10 @@
+Line 11: Vertex not found: stu3333
+Line 12: Vertex not found: stu44444
+Line 16: Vertex not found: hospi1
+Line 17: Vertex not found: hospi2
+
+Incompatible preference lists 
+hospi111 doesn't have stu1 in its preferences but vice-versa is true.
+hospi22 doesn't have stu1 in its preferences but vice-versa is true.
+hospi111 doesn't have stu22 in its preferences but vice-versa is true.
+hospi22 doesn't have stu22 in its preferences but vice-versa is true.

@@ -297,6 +297,7 @@ void GraphReader::handle_preference_lists(BipartiteGraph::ContainerType& A, Bipa
 
 void GraphReader::compatibility_checker(BipartiteGraph::ContainerType& A, BipartiteGraph::ContainerType& B)
 {
+    bool flag = true;
     // Checks if every 'b' in a's preference list also contains 'a' in its preference list
     for(auto it : A)
     {
@@ -308,12 +309,17 @@ void GraphReader::compatibility_checker(BipartiteGraph::ContainerType& A, Bipart
             // If v is not present in pref_list_b, the input is not compatible
             if (pref_list_b.find(v) == pref_list_b.cend())
             {
-                std::cout << v << "\n";
-                std::cout << "Incompatible preference lists" << "\n";
-                exit(0);
+                if(flag)
+                {
+                    std::cout << "\nIncompatible preference lists \n";
+                    flag = false;
+                }
+                std::cout << (u.vertex)->get_id() << " doesn't have " << v->get_id() << " in its preferences but vice-versa is true." << "\n";
             }
         }
     }
+
+    if(!flag)   exit(0);
 }
 
 std::shared_ptr<BipartiteGraph> GraphReader::read_graph() {
