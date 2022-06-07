@@ -1,0 +1,20 @@
+@PartitionA
+a1, a22, a333, a4444 ;
+@End
+
+@PartitionB
+b111 (1), b22 (1), b3 (1) ;
+@End
+
+@PreferenceListsA
+a1: b111, b22, b3;
+a22: b111, b22, b3;
+a3333: b111, b22;
+a44444: b111, b22;
+@End
+
+@PreferenceListsB
+b1: a1, a22, a333, a4444;
+b2: a1, a22, a333, a4444;
+b3: a1, a22;
+@End

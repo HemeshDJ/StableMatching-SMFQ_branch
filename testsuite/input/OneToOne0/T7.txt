@@ -1,0 +1,20 @@
+@PartitionA
+stu1, stu22, stu333, stu4444 ;
+@End
+
+@PartitionB
+hospi111 (1), hospi22 (1), hospi3 (1) ;
+@End
+
+@PreferenceListsA
+stu1: hospi111, hospi22, hospi3;
+stu22: hospi111, hospi22, hospi3;
+stu3333: hospi111, hospi22;
+stu44444: hospi111, hospi22;
+@End
+
+@PreferenceListsB
+hospi1: stu1, stu22, stu333, stu4444;
+hospi2: stu1, stu22, stu333, stu4444;
+hospi3: stu1, stu22;
+@End
