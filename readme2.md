@@ -24,3 +24,11 @@
 
 9. Added new executable for tester
    - Run using `./tester -A -s -o <output_file>` for testing stable matching and `./tester -A -p -o <output_file>` for testing popular matching.
+
+10. Removed extra files other than what's needed for compilation and comment out code other than popular and stable matching.
+
+11. While printing signature it prints features; cardinality of A, the cardinality of B, max size of preference list in A size and also prints out only max-pref-list-size of A ranks.
+
+12. Modified signature so that we are able to print signature in one file, matching in another file in the same command
+
+13. Prints the usage if u run just ./graphmatching or give incorrect arguments.

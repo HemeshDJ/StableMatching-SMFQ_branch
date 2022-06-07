@@ -18,9 +18,7 @@ This should build executables named *graphmatching* and *tester* inside the buil
 
 
 ## Usage
-
-### Computing
-The *grapthmatching* executable takes a set of parameters to compute the desired matching:
+The executable takes a set of parameters to compute the desired matching:
 
 	-s -- compute a stable matching
 	-p -- compute a maximum cardinality popular matching
@@ -29,14 +27,11 @@ To run the code in test mode:
 
 	-t -- test mode
 
-To provide an input graph, and the output matching filename:
+To provide an input graph, and the output matching and/or signature filename:
 
 	-i -- /path/to/graphfile
 	-o -- /path/to/store/the/matching
-
-To print output matching in signature format:
-
-	-g -- print output in signature format
+	-g -- /path/to/store/signature
 
 Also, for the -s and -p parameters, you could specify the resident/hospital
 proposing algorithm (by default it runs the resident proposing algorithm).
@@ -44,26 +39,12 @@ proposing algorithm (by default it runs the resident proposing algorithm).
 	-A -- run the resident proposing algorithm
 	-B -- run the hospital proposing algorithm
 
+### Computing
 For e.g., to compute a stable matching with the hospitals proposing (assuming inside the build directory):
 
 	$ ./graphmatching -B -s -i ../resources/hrlq_m6.txt -o ../resources/hrlq_m6_stable.txt
 
 ### Testing
-The *tester* executable takes a set of parameters to compute the desired matching:
-
-	-s -- test the stable matching algorithm
-	-p -- test the popular matching algorithm
-
-To provide an input graph, and the output matching filename:
-
-	-o -- /path/to/store/the/test/result
-
-Also, for the -s and -p parameters, you could specify the resident/hospital
-proposing algorithm (by default it runs the resident proposing algorithm).
-
-	-A -- run the resident proposing algorithm
-	-B -- run the hospital proposing algorithm
-
 For e.g., to test the popular matching algorithm with the residents proposing (assuming inside the build directory):
 
 	$ ./tester -A -p -o ../resources/tester_output.txt
