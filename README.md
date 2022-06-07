@@ -38,7 +38,7 @@ To print output matching in signature format:
 
 	-g -- print output in signature format
 
-Also, for the -s, -p, and -m parameters, you could specify the resident/hospital
+Also, for the -s and -p parameters, you could specify the resident/hospital
 proposing algorithm (by default it runs the resident proposing algorithm).
 
 	-A -- run the resident proposing algorithm
@@ -58,7 +58,7 @@ To provide an input graph, and the output matching filename:
 
 	-o -- /path/to/store/the/test/result
 
-Also, for the -s, -p, and -m parameters, you could specify the resident/hospital
+Also, for the -s and -p parameters, you could specify the resident/hospital
 proposing algorithm (by default it runs the resident proposing algorithm).
 
 	-A -- run the resident proposing algorithm
