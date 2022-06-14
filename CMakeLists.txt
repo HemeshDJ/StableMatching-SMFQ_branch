@@ -20,5 +20,5 @@ target_link_libraries(graphmatching graph)
 add_executable(tester test.cc)
 target_link_libraries(tester graph)
 
-# install(TARGETS graphmatching RUNTIME DESTINATION bin)
-# install(TARGETS tester RUNTIME DESTINATION bin)
+install(TARGETS graphmatching RUNTIME DESTINATION bin)
+install(TARGETS tester RUNTIME DESTINATION bin)

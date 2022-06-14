@@ -85,8 +85,11 @@ int main(int argc, char* argv[]) {
     if(!compute_stable && !compute_popular) {
         std::cerr << "Add -s to compute stable matching, -p for maximum cardinality popular matching.\n";
     }
-  
-    for(int i=1; i<=4; i++)
+    
+    int onetoone = 0;
+    int manytoone = 1;
+    
+    for(int i=1; i<=onetoone; i++)
     {
         char inp_file[] = "../testsuite/input/OneToOneX/TCY.txt";
         inp_file[27] = '0' + i;
@@ -103,18 +106,22 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    // for(int i=1; i<=4; i++)
-    // {
-    //     char inp_file[] = "../testsuite/input/ManyToOneX/TCY.txt";
-    //     inp_file[28] = '0' + i;
-    //     for(int j=0; j<10; j++)
-    //     {
-    //         inp_file[32] = '0' + j;  
-    //         input_file = inp_file;
+    for(int i=1; i<=manytoone; i++)
+    {
+        char inp_file[] = "../testsuite/input/ManyToOneX/TCY.txt";
+        inp_file[28] = '0' + i;
+        for(int j=0; j<10; j++)
+        {
+            inp_file[32] = '0' + j;  
+            input_file = inp_file;
             
-    //         compute_matching(A_proposing, input_file, output_file);
-    //     }
-    // }
+            if(compute_stable) {
+                compute_matching<StableMarriage>(A_proposing, input_file, output_file);
+            } else if(compute_popular) {
+                compute_matching<MaxCardPopular>(A_proposing, input_file, output_file);
+            }
+        }
+    }
 
     return 0;
 }
