@@ -17,7 +17,7 @@ private:
     int max_level;
 
     // stores level of vertex in the matching
-    std::map<VertexPtr, int> levels;
+    std::map<IdType, int> levels;
 
     // remove arbitrary element from list of unmatched vertices
     // and update bookkeep data

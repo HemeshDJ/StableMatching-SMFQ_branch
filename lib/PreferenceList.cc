@@ -35,6 +35,16 @@ void PreferenceList::emplace_back(VertexPtr v) {
     pref_list_.emplace_back(++cur_rank_, v);
 }
 
+void PreferenceList::emplace_back(RankType rank, VertexPtr v) {
+    pref_list_.emplace_back(rank, v);
+}
+
+void PreferenceList::sort() {
+    std::sort(pref_list_.begin(), pref_list_.end(), 
+        [&](const PrefListElement& a, const PrefListElement& b) {return a.rank < b.rank;}
+    );
+}
+
 PreferenceList::ConstIterator PreferenceList::find(VertexPtr v) const {
     return std::find_if(cbegin(), cend(), [&v] (const PrefListElement& i) { return i.vertex == v; });
 }

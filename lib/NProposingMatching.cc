@@ -43,6 +43,7 @@ void NProposingMatching::add_matched_partners(std::shared_ptr<MatchedPairListTyp
     add_partner(M, v, u, compute_rank(u, v_pref_list), u_data.level);
 }
 
+/*
 void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out)
 {
     std::stringstream stmp;
@@ -187,17 +188,21 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
     out << stmp.str();
 }
 
+*/
+
 void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out)
 {
     std::stringstream stmp;
+
     const auto& proposing_partition = A_proposing ? G->get_A_partition()
                                                        : G->get_B_partition();
 
     BipartiteGraph::ContainerType Am, Bm;
+    auto Mm = std::make_shared<MatchingAlgorithm::MatchedPairListType>();
 
     for(auto &it : G->get_A_partition()) {
         auto u = it.second;
-        Am.emplace(u->get_id(), std::make_shared<Vertex>(u->get_id(), 0, 1));
+        Am.emplace(it.first, std::make_shared<Vertex>(it.first, 0, 1));
     }
 
     std::map<VertexPtr,int> availableB;
@@ -214,17 +219,22 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
         auto u = it.second;
         auto u_pref_list = u->get_preference_list();
         auto M_u = M->find(u);
-        PreferenceList& pref_list = Am[u]->get_preference_list();
+        auto A_u = Am[u->get_id()];
+        int u_level = levels[it.first];
+        PreferenceList& pref_list = A_u->get_preference_list();
 
         if(M_u != M->end()) {
             auto& partners = M_u->second;
             for(auto &it2 : u_pref_list) {
                 auto v = it2.vertex;
+                auto v_pref_list = v->get_preference_list();
                 if(partners.find(v) != partners.end())
                 {
                     std::string v_id = v->get_id() + "///" + std::to_string(availableB[v]);
                     pref_list.emplace_back(Bm[v_id]);
-                    (Bm[v_id]->get_preference_list()).emplace_back(u.rank, u);
+                    (Bm[v_id]->get_preference_list()).emplace_back(compute_rank(u , v_pref_list), A_u);
+                    add_partner(Mm, A_u, Bm[v_id], it2.rank, u_level);
+                    add_partner(Mm, Bm[v_id], A_u, compute_rank(u , v_pref_list), u_level);
                     availableB[v]++;
                 }
                 else 
@@ -232,7 +242,7 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
                     for(int i = 0; i < v->get_upper_quota(); i++) {
                         std::string v_id = v->get_id() + "///" + std::to_string(i);
                         pref_list.emplace_back(Bm[v_id]);
-                        (Bm[v_id]->get_preference_list()).emplace_back(u.rank, u);
+                        (Bm[v_id]->get_preference_list()).emplace_back(compute_rank(u , v_pref_list), A_u);
                     }
                 }   
             }
@@ -240,70 +250,90 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
         else {
             for(auto &it2 : u_pref_list) {
                 auto v = it2.vertex;
+                auto v_pref_list = v->get_preference_list();
                 for(int i = 0; i < v->get_upper_quota(); i++) {
                     std::string v_id = v->get_id() + "///" + std::to_string(i);
                     pref_list.emplace_back(Bm[v_id]);
+                    (Bm[v_id]->get_preference_list()).emplace_back(compute_rank(u , v_pref_list), A_u);
                 }
             }
         }
     }
 
-    // for(auto &it : G->get_B_partition()) {
-    //     auto u = it.second;
-    //     auto& u2 = u->get_id();
-    //     while(u2.back() != '/')
-    //         u2.pop_back();
-    //     u2.pop_back();u2.pop_back();u2.pop_back();
-        
-    //     auto u_pref_list = u2->get_preference_list();
-    //     auto M_u = M->find(u);
+    // for(auto &it : Am) {
+    //     auto u_pref_list = it.second->get_preference_list();
+    //     stmp << it.first << " : ";
+    //     for(auto &it2 : u_pref_list) {
+    //         stmp << it2.vertex->get_id() << " " << it2.rank << ", ";
+    //     }
+    //     stmp << std::endl;
+    // }
 
-    //     if(M_u != M->end()) {
+    // for(auto &it : Bm) {
+    //     auto& u_pref_list = it.second->get_preference_list();
+    //     u_pref_list.sort();
+    //     stmp << it.first << " : ";
+    //     for(auto &it2 : u_pref_list) {
+    //         stmp << it2.vertex->get_id() << " " << it2.rank << ", ";
+    //     }
+    //     stmp << std::endl;
+    // }
+    // stmp << std::endl;
+
+    // stmp << "Matching size = " << Mm->size() << std::endl;
+    // for (const auto& it : Am) {
+    //     auto u = it.second;
+    //     auto M_u = Mm->find(u);
+
+    //     if (M_u != Mm->end()) {
     //         auto& partners = M_u->second;
-    //         for(auto &it2 : u_pref_list) {
-    //             auto v = it2.vertex;
-    //             while(v->get_id().back() != '/')
-    //                 v->get_id()->pop_back();
-    //             v->get_id()->pop_back();
-    //             v->get_id()->pop_back();
-    //             v->get_id()->pop_back();
-    //             if(partners.find(v) != partners.end())
-    //             {
-    //                 PreferenceList& vm_pref_list = Am[v]->get_preference_list();
-    //                 if(vm_pref_list.find(u) != vm_pref_list.end()) {
-    //                     pref_list.emplace_back(v);
-    //                 }
-    //             }       
-    //             else 
-    //             {
-    //                 pref_list.emplace_back(v);
-    //             } 
+
+    //         for (const auto& i : partners) {
+    //             auto v = i.vertex;
+
+    //             stmp << u->get_id() << ','
+    //                  << v->get_id() << ','
+    //                  << i.rank << '\n';
     //         }
     //     }
-    //     else {
-    //         for(auto &it2 : u_pref_list) {
-    //             auto v = it2.vertex;
-    //             for(int i = 0; i < v->get_upper_quota(); i++) {
-    //                 std::string v_id = v->get_id() + "///" + std::to_string(i);
-    //                 pref_list.emplace_back(Am[v_id]);
-    //             }
+    // }
+    // for (const auto& it : Bm) {
+    //     auto u = it.second;
+    //     auto M_u = Mm->find(u);
+
+    //     if (M_u != Mm->end()) {
+    //         auto& partners = M_u->second;
+
+    //         for (const auto& i : partners) {
+    //             auto v = i.vertex;
+
+    //             stmp << u->get_id() << ','
+    //                  << v->get_id() << ','
+    //                  << i.rank << '\n';
     //         }
     //     }
+    // }
+    // stmp << std::endl;
+    
+    // for(auto &it : G->get_A_partition()) {
+    //     levels[Am[it.first]] = levels[it.second];
+    //     // stmp << it.first << " " << levels[Am[it.first]] << std::endl;
     // }
     
     // assigning edge weights to the edges
     std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
-    for( auto & it : proposing_partition ) {
+    for( auto & it : Am ) {
         auto u = it.second;
         auto u_pref_list = u->get_preference_list();
 
         for( auto& it2 : u_pref_list ) {
             int weight = 0;
             auto v = it2.vertex;
-            
+            // stmp  << u->get_id() << " & " << v->get_id() << std::endl;
             auto v_pref_list = v->get_preference_list();
-            auto M_v = M->find(v);
-            if(M_v != M->end()) {
+            auto M_v = Mm->find(v);
+            if(M_v != Mm->end()) {
+                // stmp << "enterd" << std::endl;
                 auto& partners = M_v->second;
                 if(partners.size() == 0) {
                     weight += 1;
@@ -311,7 +341,7 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
                 else {
                     auto v_worst_partner = partners.get_least_preferred();
                     auto u_rank = compute_rank(u, v_pref_list);
-                    
+                    //stmp << u->get_id() << " " << v->get_id() << " " << u_rank << " " << v_worst_partner.rank << std::endl;
                     if(v_worst_partner.rank > u_rank) {
                         weight += 1;
                     }
@@ -327,8 +357,8 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
                 weight += 1;
             }
 
-            auto M_u = M->find(u);
-            if(M_u != M->end()) {
+            auto M_u = Mm->find(u);
+            if(M_u != Mm->end()) {
                 auto& partners = M_u->second;
                 if(partners.size() == 0) {
                     weight += 1;
@@ -357,11 +387,11 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
         }
     }
 
-    for (const auto& it : proposing_partition) {
+    for (const auto& it : Am) {
         auto u = it.second;
-        auto M_u = M->find(u);
+        auto M_u = Mm->find(u);
 
-        if (M_u != M->end()) {
+        if (M_u != Mm->end()) {
             auto& partners = M_u->second;
 
             for (const auto& i : partners) {
@@ -375,17 +405,21 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
     // assigning popularity to each vertex
     std::map<VertexPtr, int> dual_value;    
 
-    for (const auto& it : proposing_partition) {
+    for (const auto& it : Am) {
         auto u = it.second;
-        auto M_u = M->find(u);
+        auto M_u = Mm->find(u);
+        int u_level = levels[it.first];
 
-        if (M_u != M->end()) {
+        if (M_u != Mm->end()) {
             auto& partners = M_u->second;
 
             for (const auto& i : partners) {
                 auto v = i.vertex;
-                dual_value[u] = (levels[u] ? -1 : 1);
-                dual_value[v] += (levels[u] ? 1 : -1);
+                dual_value[u] += (u_level ? -1 : 1);
+                stmp << "level of " << u->get_id() << " is " << u_level << std::endl;
+
+                dual_value[v] += (u_level ? 1 : -1);
+                stmp << "level of " << v->get_id() << " is " << u_level << std::endl;
             }
 
             if(partners.size() == 0) {
@@ -399,7 +433,7 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
 
     // checking if each edge is covered
     int flag = 1;
-    for( auto & it : proposing_partition ) {
+    for( auto & it : Am ) {
         auto u = it.second;
 
         for( auto& it2 : u->get_preference_list() ) {
@@ -408,6 +442,7 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
             if(dual_value[u] + dual_value[v] < edge_weights[u][v]) {
                 flag = 0;
                 stmp << u->get_id() << "," << v->get_id() << std::endl;
+                stmp << "dual value = " << dual_value[u] + dual_value[v] << ", edge weights = " << edge_weights[u][v] << std::endl;
             }
         }
     }
@@ -504,21 +539,22 @@ std::shared_ptr<MatchingAlgorithm::MatchedPairListType> NProposingMatching::comp
     for (const auto& it : proposing_partition) {
         auto u = it.second;
         auto M_u = M->find(u);
+        auto u_id = it.first;
 
         if (M_u != M->end()) {
             auto& partners = M_u->second;
 
             for (const auto& i : partners) {
                 auto v = i.vertex;
-                levels[u] = bookkeep_data[u].level;
+                levels[u_id] = bookkeep_data[u].level;
             }
 
             if (partners.size() == 0) {
-                levels[u] = bookkeep_data[u].level;
+                levels[u_id] = bookkeep_data[u].level;
             }
         }
         else {
-            levels[u] = bookkeep_data[u].level;
+            levels[u_id] = bookkeep_data[u].level;
         }
     }
 

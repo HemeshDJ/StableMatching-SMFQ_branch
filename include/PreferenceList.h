@@ -46,6 +46,11 @@ public:
 
     /// insert element at end
     void emplace_back(VertexPtr v);
+    
+    /// insert element at the end with the given rank
+    void emplace_back(RankType rank, VertexPtr v);
+
+    void sort();
 
     /// find the vertex in the container
     [[nodiscard]] ConstIterator find(VertexPtr v) const;
