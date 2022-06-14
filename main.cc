@@ -51,7 +51,7 @@ void compute_matching(bool A_proposing, bool test, const char* input_file, const
     //s.get_smfq_statistics(G, M);
     
     if(test) {
-        alg.checker(G, M, A_proposing, std::cout);
+        alg.checker(G, M, A_proposing, std::cerr);
     }
 
     print_matching(G, M, std::cout);

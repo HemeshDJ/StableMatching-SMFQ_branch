@@ -43,153 +43,6 @@ void NProposingMatching::add_matched_partners(std::shared_ptr<MatchedPairListTyp
     add_partner(M, v, u, compute_rank(u, v_pref_list), u_data.level);
 }
 
-/*
-void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out)
-{
-    std::stringstream stmp;
-    const auto& proposing_partition = A_proposing ? G->get_A_partition()
-                                                       : G->get_B_partition();
-
-    // assigning edge weights to the edges
-    std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
-    for( auto & it : proposing_partition ) {
-        auto u = it.second;
-        auto u_pref_list = u->get_preference_list();
-
-        for( auto& it2 : u_pref_list ) {
-            int weight = 0;
-            auto v = it2.vertex;
-            
-            auto v_pref_list = v->get_preference_list();
-            auto M_v = M->find(v);
-            if(M_v != M->end()) {
-                auto& partners = M_v->second;
-                if(partners.size() == 0) {
-                    weight += 1;
-                }
-                else {
-                    auto v_worst_partner = partners.get_least_preferred();
-                    auto u_rank = compute_rank(u, v_pref_list);
-                    
-                    if(v_worst_partner.rank > u_rank) {
-                        weight += 1;
-                    }
-                    else if(u_rank > v_worst_partner.rank) {
-                        weight += -1;
-                    }
-                    else {
-                        weight += 0;
-                    }
-                }
-            }
-            else {
-                weight += 1;
-            }
-
-            auto M_u = M->find(u);
-            if(M_u != M->end()) {
-                auto& partners = M_u->second;
-                if(partners.size() == 0) {
-                    weight += 1;
-                }
-                else {
-                    auto u_worst_partner = partners.get_least_preferred();
-                    auto v_rank = compute_rank(v, u_pref_list);
-                    
-                    if(u_worst_partner.rank > v_rank) {
-                        weight += 1;
-                    }
-                    else if(v_rank > u_worst_partner.rank) {
-                        weight += -1;
-                    }
-                    else {
-                        weight += 0;
-                    }
-                }
-            }
-            else {
-                weight += 1;
-            }
-            
-            edge_weights[u][v] += weight;
-            edge_weights[v][u] += weight;
-        }
-    }
-
-    for (const auto& it : proposing_partition) {
-        auto u = it.second;
-        auto M_u = M->find(u);
-
-        if (M_u != M->end()) {
-            auto& partners = M_u->second;
-
-            for (const auto& i : partners) {
-                auto v = i.vertex;
-                edge_weights[v][v] = -1;
-                edge_weights[u][u] = -1;
-            }
-        }
-    }
-
-    // assigning popularity to each vertex
-    std::map<VertexPtr, int> dual_value;    
-
-    for (const auto& it : proposing_partition) {
-        auto u = it.second;
-        auto M_u = M->find(u);
-
-        if (M_u != M->end()) {
-            auto& partners = M_u->second;
-
-            for (const auto& i : partners) {
-                auto v = i.vertex;
-                dual_value[u] = (levels[u] ? -1 : 1);
-                dual_value[v] += (levels[u] ? 1 : -1);
-            }
-
-            if(partners.size() == 0) {
-                dual_value[u] = 0;
-            }
-        }
-        else {
-            dual_value[u] = 0;
-        }
-    }                                      
-
-    // checking if each edge is covered
-    int flag = 1;
-    for( auto & it : proposing_partition ) {
-        auto u = it.second;
-
-        for( auto& it2 : u->get_preference_list() ) {
-            auto v = it2.vertex;
-
-            if(dual_value[u] + dual_value[v] < edge_weights[u][v]) {
-                flag = 0;
-                stmp << u->get_id() << "," << v->get_id() << std::endl;
-            }
-        }
-    }
-
-
-    // checking if total sum of dual_value is 0
-    int dual_sum = 0;
-    for(auto it : dual_value) {
-        dual_sum += it.second;
-    }
-    
-    if(!flag)
-        stmp << "Edges not covered. " << std::endl;
-    if(dual_sum)
-        stmp << "Popularity sum is non-zero, equal to " << dual_sum << ". " << std::endl;
-    if(flag && !dual_sum)
-        stmp << "Passed. Certificate issued!" << std::endl;
-
-    out << stmp.str();
-}
-
-*/
-
 void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<MatchingAlgorithm::MatchedPairListType> M, bool A_proposing, std::ostream& out)
 {
     std::stringstream stmp;
@@ -260,65 +113,10 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
         }
     }
 
-    // for(auto &it : Am) {
-    //     auto u_pref_list = it.second->get_preference_list();
-    //     stmp << it.first << " : ";
-    //     for(auto &it2 : u_pref_list) {
-    //         stmp << it2.vertex->get_id() << " " << it2.rank << ", ";
-    //     }
-    //     stmp << std::endl;
-    // }
-
-    // for(auto &it : Bm) {
-    //     auto& u_pref_list = it.second->get_preference_list();
-    //     u_pref_list.sort();
-    //     stmp << it.first << " : ";
-    //     for(auto &it2 : u_pref_list) {
-    //         stmp << it2.vertex->get_id() << " " << it2.rank << ", ";
-    //     }
-    //     stmp << std::endl;
-    // }
-    // stmp << std::endl;
-
-    // stmp << "Matching size = " << Mm->size() << std::endl;
-    // for (const auto& it : Am) {
-    //     auto u = it.second;
-    //     auto M_u = Mm->find(u);
-
-    //     if (M_u != Mm->end()) {
-    //         auto& partners = M_u->second;
-
-    //         for (const auto& i : partners) {
-    //             auto v = i.vertex;
-
-    //             stmp << u->get_id() << ','
-    //                  << v->get_id() << ','
-    //                  << i.rank << '\n';
-    //         }
-    //     }
-    // }
-    // for (const auto& it : Bm) {
-    //     auto u = it.second;
-    //     auto M_u = Mm->find(u);
-
-    //     if (M_u != Mm->end()) {
-    //         auto& partners = M_u->second;
-
-    //         for (const auto& i : partners) {
-    //             auto v = i.vertex;
-
-    //             stmp << u->get_id() << ','
-    //                  << v->get_id() << ','
-    //                  << i.rank << '\n';
-    //         }
-    //     }
-    // }
-    // stmp << std::endl;
-    
-    // for(auto &it : G->get_A_partition()) {
-    //     levels[Am[it.first]] = levels[it.second];
-    //     // stmp << it.first << " " << levels[Am[it.first]] << std::endl;
-    // }
+    for(auto &it : Bm) {
+        auto& u_pref_list = it.second->get_preference_list();
+        u_pref_list.sort();
+    }
     
     // assigning edge weights to the edges
     std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
@@ -329,11 +127,9 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
         for( auto& it2 : u_pref_list ) {
             int weight = 0;
             auto v = it2.vertex;
-            // stmp  << u->get_id() << " & " << v->get_id() << std::endl;
             auto v_pref_list = v->get_preference_list();
             auto M_v = Mm->find(v);
             if(M_v != Mm->end()) {
-                // stmp << "enterd" << std::endl;
                 auto& partners = M_v->second;
                 if(partners.size() == 0) {
                     weight += 1;
@@ -341,7 +137,6 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
                 else {
                     auto v_worst_partner = partners.get_least_preferred();
                     auto u_rank = compute_rank(u, v_pref_list);
-                    //stmp << u->get_id() << " " << v->get_id() << " " << u_rank << " " << v_worst_partner.rank << std::endl;
                     if(v_worst_partner.rank > u_rank) {
                         weight += 1;
                     }
@@ -416,10 +211,7 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
             for (const auto& i : partners) {
                 auto v = i.vertex;
                 dual_value[u] += (u_level ? -1 : 1);
-                stmp << "level of " << u->get_id() << " is " << u_level << std::endl;
-
                 dual_value[v] += (u_level ? 1 : -1);
-                stmp << "level of " << v->get_id() << " is " << u_level << std::endl;
             }
 
             if(partners.size() == 0) {
