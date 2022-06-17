@@ -51,7 +51,7 @@ void compute_matching(bool A_proposing, bool test, const char* input_file, const
     //s.get_smfq_statistics(G, M);
     
     if(test) {
-        alg.checker(G, M, A_proposing, std::cout);
+        alg.checker(G, M, A_proposing, std::cerr);
     }
 
     print_matching(G, M, std::cout);
@@ -79,7 +79,7 @@ int main(int argc, char* argv[]) {
     // bool compute_exact_exp_smfq = false;
     bool compute_stable = false;
     bool compute_popular = false;
-    // bool compute_max_card = false;
+    bool compute_max_card = false;
     // bool compute_rhrlq = false;
     // bool compute_hhrlq = false;
     // bool compute_yhrlq = false;
@@ -100,7 +100,7 @@ int main(int argc, char* argv[]) {
     // -t computes in test mode
     // -i is the path to the input graph, -o is the path where the matching
     // computed should be stored
-    while ((c = getopt(argc, argv, "ABsptg:i:o:")) != -1) {
+    while ((c = getopt(argc, argv, "ABspmtg:i:o:")) != -1) {
         switch (c) {
             case 'A': A_proposing = true; break;
             case 'B': A_proposing = false; break; 
@@ -112,7 +112,7 @@ int main(int argc, char* argv[]) {
             // case 'k': compute_exact_exp_smfq = true; break;
             // case 'l': compute_lp_smfq = true; break;
             // case 'z': compute_sea_popular = true; break;
-            // case 'm': compute_max_card = true; break;
+            case 'm': compute_max_card = true; break;
             // case 'r': compute_rhrlq = true; break;
             // case 'h': compute_hhrlq = true; break;
             // case 'y': compute_yhrlq = true; break;
@@ -137,9 +137,11 @@ int main(int argc, char* argv[]) {
 
     if(!input_file) {
         std::cerr << "Add -i <input_file_name> to specify input file.\n";
+        return 0;
     }
     if(!output_file && !sig_file) {     //neither signature nor output file is specified
         std::cerr << "Add -o or -g (with arguments).\n";
+        return 0;
     }
     
     if (compute_stable) {
@@ -156,8 +158,8 @@ int main(int argc, char* argv[]) {
     //     compute_matching<SEAPopularHRLQ>(A_proposing, test, input_file, output_file);
     }else if (compute_popular) {
         compute_matching<MaxCardPopular>(A_proposing, test, input_file, output_file, sig_file);
-    // } else if (compute_max_card) {
-    //     compute_matching<PopularAmongMaxCard>(A_proposing, test, input_file, output_file);
+    } else if (compute_max_card) {
+        compute_matching<PopularAmongMaxCard>(A_proposing, test, input_file, output_file);
     // } else if (compute_rhrlq) {
     //     compute_matching<RHeuristicHRLQ>(A_proposing, test, input_file, output_file);
     // } else if (compute_hhrlq) {

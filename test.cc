@@ -86,8 +86,8 @@ int main(int argc, char* argv[]) {
         std::cerr << "Add -s to compute stable matching, -p for maximum cardinality popular matching.\n";
     }
     
-    int onetoone = 0;
-    int manytoone = 1;
+    int onetoone = 2;
+    int manytoone = 2;
     
     for(int i=1; i<=onetoone; i++)
     {

@@ -50,31 +50,25 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
     const auto& proposing_partition = A_proposing ? G->get_A_partition() : G->get_B_partition();
     const auto& non_proposing_partition = A_proposing ? G->get_B_partition() : G->get_A_partition();
 
-    BipartiteGraph::ContainerType Am, Bm;
+    BipartiteGraph::ContainerType Bm;
     auto Mm = std::make_shared<MatchingAlgorithm::MatchedPairListType>();
 
-    for(auto &it : proposing_partition) {
-        auto u = it.second;
-        Am.emplace(it.first, std::make_shared<Vertex>(it.first, 0, 1));
-    }
-
-    std::map<VertexPtr,int> availableB;
+    std::map<VertexPtr,int> matchedB;         // number of matched clones for each vertex in B
     for(auto &it : non_proposing_partition) {
         auto u = it.second;
-        availableB[u] = 0;
+        matchedB[u] = 0;
         for(int i = 0; i < u->get_upper_quota(); i++) {
             std::string u_id = u->get_id() + "///" + std::to_string(i);
             Bm.emplace(u_id, std::make_shared<Vertex>(u_id, 0, 1));
         }
     }
 
+    // creating new matching Mm
     for(auto &it : proposing_partition) {
         auto u = it.second;
         auto u_pref_list = u->get_preference_list();
         auto M_u = M->find(u);
-        auto A_u = Am[u->get_id()];
         int u_level = levels[it.first];
-        PreferenceList& pref_list = A_u->get_preference_list();
 
         if(M_u != M->end()) {
             auto& partners = M_u->second;
@@ -83,182 +77,18 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
                 auto v_pref_list = v->get_preference_list();
                 if(partners.find(v) != partners.end())
                 {
-                    std::string v_id = v->get_id() + "///" + std::to_string(availableB[v]);
-                    pref_list.emplace_back(Bm[v_id]);
-                    (Bm[v_id]->get_preference_list()).emplace_back(compute_rank(u , v_pref_list), A_u);
-                    add_partner(Mm, A_u, Bm[v_id], it2.rank, u_level);
-                    add_partner(Mm, Bm[v_id], A_u, compute_rank(u , v_pref_list), u_level);
-                    availableB[v]++;
+                    std::string v_id = v->get_id() + "///" + std::to_string(matchedB[v]);
+                    add_partner(Mm, u, Bm[v_id], it2.rank, u_level);
+                    add_partner(Mm, Bm[v_id], u, compute_rank(u , v_pref_list), u_level);
+                    matchedB[v]++;
                 }
-                else 
-                {
-                    for(int i = 0; i < v->get_upper_quota(); i++) {
-                        std::string v_id = v->get_id() + "///" + std::to_string(i);
-                        pref_list.emplace_back(Bm[v_id]);
-                        (Bm[v_id]->get_preference_list()).emplace_back(compute_rank(u , v_pref_list), A_u);
-                    }
-                }   
-            }
-        }
-        else {
-            for(auto &it2 : u_pref_list) {
-                auto v = it2.vertex;
-                auto v_pref_list = v->get_preference_list();
-                for(int i = 0; i < v->get_upper_quota(); i++) {
-                    std::string v_id = v->get_id() + "///" + std::to_string(i);
-                    pref_list.emplace_back(Bm[v_id]);
-                    (Bm[v_id]->get_preference_list()).emplace_back(compute_rank(u , v_pref_list), A_u);
-                }
-            }
-        }
-    }
-
-    // for(auto &it : Am) {
-    //     auto u_pref_list = it.second->get_preference_list();
-    //     stmp << it.first << " : ";
-    //     for(auto &it2 : u_pref_list) {
-    //         stmp << it2.vertex->get_id() << " " << it2.rank << ", ";
-    //     }
-    //     stmp << std::endl;
-    // }
-
-    for(auto &it : Bm) {
-        auto& u_pref_list = it.second->get_preference_list();
-        u_pref_list.sort();
-        // stmp << it.first << " : ";
-        int rank = 1;
-        for(auto &it2 : u_pref_list) {
-            it2.rank = rank++;
-            // stmp << it2.vertex->get_id() << " " << it2.rank << ", ";
-        }
-        // stmp << std::endl;
-    }
-    // stmp << std::endl;
-
-    // stmp << "Matching size = " << Mm->size() << std::endl;
-    // for (const auto& it : Am) {
-    //     auto u = it.second;
-    //     auto M_u = Mm->find(u);
-
-    //     if (M_u != Mm->end()) {
-    //         auto& partners = M_u->second;
-
-    //         for (const auto& i : partners) {
-    //             auto v = i.vertex;
-
-    //             stmp << u->get_id() << ','
-    //                  << v->get_id() << ','
-    //                  << i.rank << '\n';
-    //         }
-    //     }
-    // }
-    for (auto& it : Bm) {
-        auto u = it.second;
-        auto M_u = Mm->find(u);
-        auto u_pref_list = u->get_preference_list();
-
-        if (M_u != Mm->end()) {
-            auto& partners = M_u->second;
-
-            for (auto& i : partners) {
-                auto v = i.vertex;
-                auto v_rank = compute_rank(v, u_pref_list);
-                i.rank = v_rank;
-
-                // stmp << u->get_id() << ','
-                //      << v->get_id() << ','
-                //      << i.rank << '\n';
-            }
-        }
-    }
-    // stmp << std::endl;
-    
-    // assigning edge weights to the edges
-    std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
-    for( auto & it : Am ) {
-        auto u = it.second;
-        auto u_pref_list = u->get_preference_list();
-
-        for( auto& it2 : u_pref_list ) {
-            int weight = 0;
-            auto v = it2.vertex;
-            // stmp  << u->get_id() << " & " << v->get_id() << std::endl;
-            auto v_pref_list = v->get_preference_list();
-            auto M_v = Mm->find(v);
-            if(M_v != Mm->end()) {
-                // stmp << "enterd" << std::endl;
-                auto& partners = M_v->second;
-                if(partners.size() == 0) {
-                    weight += 1;
-                }
-                else {
-                    auto v_worst_partner = partners.get_least_preferred();
-                    auto u_rank = compute_rank(u, v_pref_list);
-                    // stmp << u->get_id() << " " << v->get_id() << " " << u_rank << " " << v_worst_partner.rank << std::endl;
-                    if(v_worst_partner.rank > u_rank) {
-                        weight += 1;
-                    }
-                    else if(u_rank > v_worst_partner.rank) {
-                        weight += -1;
-                    }
-                    else {
-                        weight += 0;
-                    }
-                }
-            }
-            else {
-                weight += 1;
-            }
-
-            auto M_u = Mm->find(u);
-            if(M_u != Mm->end()) {
-                auto& partners = M_u->second;
-                if(partners.size() == 0) {
-                    weight += 1;
-                }
-                else {
-                    auto u_worst_partner = partners.get_least_preferred();
-                    auto v_rank = compute_rank(v, u_pref_list);
-                    
-                    if(u_worst_partner.rank > v_rank) {
-                        weight += 1;
-                    }
-                    else if(v_rank > u_worst_partner.rank) {
-                        weight += -1;
-                    }
-                    else {
-                        weight += 0;
-                    }
-                }
-            }
-            else {
-                weight += 1;
-            }
-            
-            edge_weights[u][v] += weight;
-            edge_weights[v][u] += weight;
-        }
-    }
-
-    for (const auto& it : Am) {
-        auto u = it.second;
-        auto M_u = Mm->find(u);
-
-        if (M_u != Mm->end()) {
-            auto& partners = M_u->second;
-
-            for (const auto& i : partners) {
-                auto v = i.vertex;
-                edge_weights[v][v] = -1;
-                edge_weights[u][u] = -1;
             }
         }
     }
 
     // assigning popularity to each vertex
     std::map<VertexPtr, int> dual_value;    
-
-    for (const auto& it : Am) {
+    for (const auto& it : proposing_partition) {
         auto u = it.second;
         auto M_u = Mm->find(u);
         int u_level = levels[it.first];
@@ -268,38 +98,137 @@ void NProposingMatching::checker(std::shared_ptr<BipartiteGraph> G,std::shared_p
 
             for (const auto& i : partners) {
                 auto v = i.vertex;
-                dual_value[u] += (u_level ? -1 : 1);
-                // stmp << "level of " << u->get_id() << " is " << u_level << std::endl;
-
-                dual_value[v] += (u_level ? 1 : -1);
-                // stmp << "level of " << v->get_id() << " is " << u_level << std::endl;
-            }
-
-            if(partners.size() == 0) {
-                dual_value[u] = 0;
+                dual_value[u] = (u_level ? -1 : 1);
+                dual_value[v] = (u_level ? 1 : -1);
             }
         }
-        else {
-            dual_value[u] = 0;
-        }
-    }                                      
-
+    }
+    
     // checking if each edge is covered
     int flag = 1;
-    for( auto & it : Am ) {
+
+    // assigning edge weights to the edges
+    std::map<VertexPtr, std::map<VertexPtr, int>> edge_weights;
+    for( auto & it : proposing_partition ) {
         auto u = it.second;
+        auto u_pref_list = u->get_preference_list();
 
-        for( auto& it2 : u->get_preference_list() ) {
+        for( auto& it2 : u_pref_list ) {
+            int u_contribution = 0, v_contribution = 0;
             auto v = it2.vertex;
+            auto v_pref_list = v->get_preference_list();
 
-            if(dual_value[u] + dual_value[v] < edge_weights[u][v]) {
-                flag = 0;
-                stmp << u->get_id() << "," << v->get_id() << std::endl;
-                // stmp << "dual value = " << dual_value[u] + dual_value[v] << ", edge weights = " << edge_weights[u][v] << std::endl;
+            // partner check
+            bool isPartner = false;
+            auto M_u = M->find(u);
+            if(M_u != M->end()) {
+                auto& partners = M_u->second;
+                if(partners.find(v) != partners.end()) {
+                    isPartner = true;
+                }
+            }
+
+            // matching edge
+            if(isPartner) {
+                auto Mm_u = Mm->find(u);
+                auto v_matched_clone = Mm_u->second.get_least_preferred().vertex;
+                edge_weights[u][v_matched_clone] = 0;
+                if(dual_value[u] + dual_value[v_matched_clone] < 0) {
+                    flag = 0;
+                    stmp << u->get_id() << "," << v->get_id() << std::endl;
+                    // stmp << dual_value[u] << " " << dual_value[v_matched_clone] << " " << 0 << std::endl;
+                }
+                continue;
+            }
+            
+            // non-matching edge
+            // u's contribution to the edge weight
+            auto Mm_u = Mm->find(u);
+            if(Mm_u != Mm->end()) {
+                auto& partners = Mm_u->second;
+                if(partners.size() == 0) {
+                    u_contribution = 1;
+                }
+                else {
+                    auto u_worst_partner = partners.get_least_preferred();
+                    auto v_rank = compute_rank(v, u_pref_list);
+                    
+                    if(u_worst_partner.rank > v_rank) {
+                        u_contribution = 1;
+                    }
+                    else if(v_rank > u_worst_partner.rank) {
+                        u_contribution = -1;
+                    }
+                    else {
+                        u_contribution = 0;
+                    }
+                }
+            }
+            else {
+                u_contribution = 1;
+            }
+
+            // v's contribution to the edge weight
+            for(int i = 0; i < v->get_upper_quota(); i++) {
+                std::string v_id = v->get_id() + "///" + std::to_string(i);
+                VertexPtr v_clone = Bm[v_id];
+                auto Mm_v = Mm->find(v_clone);
+                if(Mm_v != Mm->end()) {
+                    auto& partners = Mm_v->second;
+                    if(partners.size() == 0) {
+                        v_contribution = 1;
+                    }
+                    else {
+                        auto v_worst_partner = partners.get_least_preferred();
+                        auto u_rank = compute_rank(u, v_pref_list);
+                        
+                        if(v_worst_partner.rank > u_rank) {
+                            v_contribution = 1;
+                        }
+                        else if(u_rank > v_worst_partner.rank) {
+                            v_contribution = -1;
+                        }
+                        else {
+                            v_contribution = 0;
+                        }
+                    }
+                }
+                else {
+                    v_contribution = 1;
+                }
+                
+                int edge_weight = u_contribution + v_contribution;
+                if(dual_value[u] + dual_value[v_clone] < edge_weight) {
+                    flag = 0;
+                    stmp << u->get_id() << "," << v->get_id() << std::endl;
+                    // stmp << dual_value[u] << " " << dual_value[v_clone] << " " << edge_weight << std::endl;
+                }
             }
         }
     }
 
+    for (const auto& it : proposing_partition) {
+        auto u = it.second;
+        auto M_u = Mm->find(u);
+
+        if (M_u != Mm->end()) {
+            auto& partners = M_u->second;
+
+            for (const auto& i : partners) {
+                auto v = i.vertex;
+                // edge_weights[v][v] = -1;
+                // edge_weights[u][u] = -1;
+                if(dual_value[v] < -1) {
+                    flag = 0;
+                    stmp << v->get_id() << "," << v->get_id() << std::endl;
+                }
+                if(dual_value[u] < -1) {
+                    flag = 0;
+                    stmp << u->get_id() << "," << u->get_id() << std::endl;
+                }
+            }
+        }
+    }
 
     // checking if total sum of dual_value is 0
     int dual_sum = 0;

@@ -86,7 +86,7 @@ void StableMarriage::checker(std::shared_ptr<BipartiteGraph> G,std::shared_ptr<M
         for( auto& it2 : u->get_preference_list() ) {
             auto v = it2.vertex;
 
-            if(edge_weights[u][v] == 2) {           //if u prefers v over M(u) and vice-versa
+            if(edge_weights[u][v] == 2 && v->get_upper_quota()) {           //if u prefers v over M(u) and vice-versa
                 
                 if(flag)
                     stmp << "Matching is not stable" << std::endl;
