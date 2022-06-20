@@ -9,7 +9,7 @@
 /// Lexer class defined here
 
 Lexer::Lexer(std::istream& in)
-    : ch_(' '), lineno_(0), in_(in)
+    : ch_(' '), lineno_(1), in_(in)
 {
     if (not in_) {
         throw ReaderException("error reading input stream.");
@@ -17,10 +17,10 @@ Lexer::Lexer(std::istream& in)
 }
 
 void Lexer::read_character() {
-    ch_ = in_.get();
     if (ch_ == '\n') {
         ++lineno_;
     }
+    ch_ = in_.get();
 }
 
 int Lexer::line_number() {
@@ -58,7 +58,6 @@ Token Lexer::next_token() {
             lexeme_.push_back(static_cast<char>(ch_));
             read_character();
         }
-
         if (lexeme_ == "End") return TOK_END;
         if (lexeme_ == "PartitionA") return TOK_PARTITION_A;
         if (lexeme_ == "PartitionB") return TOK_PARTITION_B;
@@ -181,7 +180,10 @@ void GraphReader::read_partition(BipartiteGraph::ContainerType& vmap) {
 
         // if there are more vertices, they must
         // be delimited using commas
-        if (curtok_ != TOK_SEMICOLON) {
+        if(curtok_ == TOK_AT) {
+            match(TOK_SEMICOLON);
+        }
+        else if (curtok_ != TOK_SEMICOLON) {
             match(TOK_COMMA);
         }
     }
@@ -253,7 +255,19 @@ void GraphReader::read_preference_lists(BipartiteGraph::ContainerType& A, Bipart
 
             // if there are more vertices, they must
             // be delimited using commas
-            if (curtok_ != TOK_SEMICOLON) {
+            if(curtok_ == TOK_STRING) {
+                std::string v = lexer_->get_lexeme();
+                if(A.find(v) != A.end()) {
+                    match(TOK_SEMICOLON);
+                }
+                else {
+                    match(TOK_COMMA);
+                }
+            }
+            else if(curtok_ == TOK_AT) {
+                match(TOK_SEMICOLON);
+            }
+            else if (curtok_ != TOK_SEMICOLON) {
                 match(TOK_COMMA);
             }
         }
@@ -361,8 +375,10 @@ std::shared_ptr<BipartiteGraph> GraphReader::read_graph() {
         //                                     {(pref_lists == TOK_PREF_LISTS_A) ? TOK_PREF_LISTS_B : TOK_PREF_LISTS_A}));
     }
 
-    compatibility_checker(A, B);
-    compatibility_checker(B, A);
+    if(!error_occurred) {
+        compatibility_checker(A, B);
+        compatibility_checker(B, A);
+    }
 
     if (error_occurred) {
         return NULL;

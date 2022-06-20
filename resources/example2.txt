@@ -1,0 +1,31 @@
+@PartitionA
+a1, a2, a3, a4, a5, a6, a7, a8;
+@End
+
+@PartitionB
+b1 (0, 1), b2 (0, 1), b3 (0, 1), b4 (0, 1), b5 (0, 1), b6 (0, 1), b7 (0, 1), b8 (0, 1), b9 (0, 0), b10 (0, 0);
+@End
+
+@PreferenceListsA
+a1: b1, b4, b2;
+a2: b1, b9;
+a3: b3, b4;
+a4: b3, b4;
+a5: b5, b6, b10;
+a6: b5, b7, b4;
+a7: b5;
+a8: b10, b6, b8;
+@End
+
+@PreferenceListsB
+b1:a1,a2;
+b2:a1;
+b3:a3,a4;
+b4:a3,a4,a1,a6;
+b5: a5,a6,a7;
+b6: a5,a8;
+b7:a6;
+b8:a8;
+b9:a2;
+b10:a8,a5;
+@End
